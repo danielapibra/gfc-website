@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Golden Fight Club — Boxeo &amp; Acondicionamiento en Duitama</title>
+<meta name="description" content="Golden Fight Club: club de boxeo y acondicionamiento físico en Duitama, Boyacá. Horarios, planes, equipo, eventos y más.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230b0b0d'/%3E%3Ctext x='50' y='68' font-size='58' text-anchor='middle'%3E%F0%9F%A5%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Saltar al contenido</a>
+<svg class="grain" xmlns="http://www.w3.org/2000/svg"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
+
+<!-- ============ HEADER ============ -->
+<header id="siteHeader">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="Golden Fight Club — inicio">
+      <img src="assets/img/logo.webp" alt="Golden Fight Club">
+    </a>
+    <nav class="nav-desktop" aria-label="Navegación principal">
+      <a href="#nosotros" data-nav>Nosotros</a>
+      <a href="#horarios" data-nav>Horarios</a>
+      <a href="#planes" data-nav>Planes</a>
+      <a href="#equipo" data-nav>Equipo</a>
+      <a href="#galeria" data-nav>Galería</a>
+      <a href="#eventos" data-nav>Eventos</a>
+      <a href="#resenas" data-nav>Reseñas</a>
+      <a href="#ubicacion" data-nav>Ubicación</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-gold btn-sm" href="https://wa.me/573138969300?text=%C2%A1Hola%21%20Vi%20la%20p%C3%A1gina%20web%20de%20Golden%20Fight%20Club%20y%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20entrenamientos%20y%20los%20planes%20disponibles.%20%C2%BFPodr%C3%ADan%20ayudarme%3F" target="_blank" rel="noopener">Escríbenos</a>
+      <button class="hamburger" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+        <svg id="menuIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-menu" id="mobileMenu" aria-label="Navegación móvil">
+  <a href="#nosotros" data-nav><span class="rn">01</span> Nosotros</a>
+  <a href="#horarios" data-nav><span class="rn">02</span> Horarios</a>
+  <a href="#planes" data-nav><span class="rn">03</span> Planes</a>
+  <a href="#equipo" data-nav><span class="rn">04</span> Equipo</a>
+  <a href="#galeria" data-nav><span class="rn">05</span> Galería</a>
+  <a href="#eventos" data-nav><span class="rn">06</span> Eventos</a>
+  <a href="#resenas" data-nav><span class="rn">07</span> Reseñas</a>
+  <a href="#ubicacion" data-nav><span class="rn">08</span> Ubicación</a>
+  <a class="btn btn-gold" href="https://wa.me/573138969300?text=%C2%A1Hola%21%20Vi%20la%20p%C3%A1gina%20web%20de%20Golden%20Fight%20Club%20y%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20entrenamientos%20y%20los%20planes%20disponibles.%20%C2%BFPodr%C3%ADan%20ayudarme%3F" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+</nav>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div data-reveal>
+      <span class="eyebrow">Duitama · Boyacá — Club de boxeo</span>
+      <h1>
+        <span class="line white">NO ENTRENAS.</span>
+        <span class="line gold">PELEAS.</span>
+      </h1>
+      <p class="lede">Boxeo y acondicionamiento físico para todo nivel: desde tu primera clase hasta tu primer combate. Técnica real, comunidad real, resultados reales.</p>
+      <div class="hero-ctas">
+        <a href="#planes" class="btn btn-gold">Ver planes</a>
+        <a href="https://wa.me/573138969300?text=%C2%A1Hola%21%20Vi%20la%20p%C3%A1gina%20de%20Golden%20Fight%20Club%20y%20me%20gustar%C3%ADa%20agendar%20una%20clase%20de%20prueba.%20%C2%BFQu%C3%A9%20d%C3%ADas%20y%20horarios%20tienen%20disponibles%20esta%20semana%3F" target="_blank" rel="noopener" class="btn btn-outline">Agenda una clase</a>
+      </div>
+      <ul class="hero-meta">
+        <li><span class="dot"></span> Boxeo · Acondicionamiento · Sparring</li>
+        <li><span class="dot live" id="heroLiveDot"></span> <span id="heroLiveText">Consultando horario…</span></li>
+        <li><span class="dot"></span> 📍 Duitama, Boyacá</li>
+      </ul>
+    </div>
+    <div class="timer-wrap" data-reveal>
+      <div class="round-timer" id="roundTimer" aria-hidden="true">
+        <svg viewBox="0 0 200 200">
+          <defs>
+            <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#e4c377"/>
+              <stop offset="100%" stop-color="#6d28d9"/>
+            </linearGradient>
+          </defs>
+          <circle class="ring-track" cx="100" cy="100" r="90"/>
+          <circle class="ring-progress" id="ringProgress" cx="100" cy="100" r="90"/>
+        </svg>
+        <div class="round-timer-face">
+          <span class="rlabel">Round 1</span>
+          <span class="rtime" id="roundTime">03:00</span>
+          <span class="rsub">Así se siente cada clase</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>BOXEO<span></span></span><span>ACONDICIONAMIENTO<span></span></span><span>DISCIPLINA<span></span></span><span>COMUNIDAD<span></span></span><span>GOLDEN FIGHT CLUB<span></span></span>
+    <span>BOXEO<span></span></span><span>ACONDICIONAMIENTO<span></span></span><span>DISCIPLINA<span></span></span><span>COMUNIDAD<span></span></span><span>GOLDEN FIGHT CLUB<span></span></span>
+  </div>
+</div>
+
+<section class="values-band" aria-label="Golden Fight Club — Valentía, Disciplina, Resistencia, Actitud">
+  <div class="mq-row mq-row--frame">
+    <div class="mq-track">
+      <span class="mq-seq">GOLDEN FIGHT CLUB <i>✦</i> GOLDEN FIGHT CLUB <i>✦</i> </span>
+      <span class="mq-seq" aria-hidden="true">GOLDEN FIGHT CLUB <i>✦</i> GOLDEN FIGHT CLUB <i>✦</i> </span>
+    </div>
+  </div>
+  <div class="mq-row mq-row--main">
+    <div class="mq-track">
+      <span class="mq-seq"><span class="word g">VALENTÍA</span><i>✦</i><span class="word w">DISCIPLINA</span><i>✦</i><span class="word g">RESISTENCIA</span><i>✦</i><span class="word w">ACTITUD</span><i>✦</i></span>
+      <span class="mq-seq" aria-hidden="true"><span class="word g">VALENTÍA</span><i>✦</i><span class="word w">DISCIPLINA</span><i>✦</i><span class="word g">RESISTENCIA</span><i>✦</i><span class="word w">ACTITUD</span><i>✦</i></span>
+    </div>
+  </div>
+  <div class="mq-row mq-row--frame purple">
+    <div class="mq-track">
+      <span class="mq-seq">GOLDEN FIGHT CLUB <i>✦</i> GOLDEN FIGHT CLUB <i>✦</i> </span>
+      <span class="mq-seq" aria-hidden="true">GOLDEN FIGHT CLUB <i>✦</i> GOLDEN FIGHT CLUB <i>✦</i> </span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROUND 01 — QUIÉNES SOMOS ============ -->
+<section class="section" id="nosotros">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Round 01</span>
+      <h2 class="round-title"><span class="ghost" aria-hidden="true">QUIÉNES SOMOS</span><span class="fg">QUIÉNES SOMOS</span></h2>
+    </div>
+
+    <div class="historia-grid" data-reveal>
+      <div class="historia-copy">
+        <p class="historia-kicker">Somos Golden Fight Club.</p>
+        <p>Golden Fight Club no es un gimnasio. Es el resultado de un sueño compartido, de dos personas que decidieron transformar su pasión en un movimiento.</p>
+        <p>Natalia y Camilo empezaron desde cero. Ella, amante incondicional del deporte. Él, dedicado de corazón al boxeo. Juntos, algo mágico sucedió: la visión de crear un espacio donde la gente no viniera solo a entrenar, sino a pertenecer.</p>
+        <p>Porque aquí la diferencia es esta: no es una clase más. Es un espacio donde la motivación es contagiosa, donde cada golpe, cada gota de sudor, cada pequeña victoria te acerca más a quien quieres ser. Es ese rato agradable donde te desafías a ti mismo, donde te exiges más porque sabes que no estás solo. Donde la comunidad te empuja, te celebra, te cree.</p>
+        <p>Orgullosos de lo que hemos construido. Hambrientos de lo que vendrá.</p>
+        <p class="historia-close">Aquí nos movemos por ambición, vivimos con pasión, y construimos desde los sueños.</p>
+      </div>
+      <div class="history-wrap">
+        <div class="history-track-outer">
+          <div class="history-track" id="historyTrack">
+            <div class="history-slide">
+              <img src="assets/img/nosotros-1.webp" alt="Entrenamiento de pádel en el ring">
+              <div><span class="yr">Así entrenamos</span><span class="cap">Técnica, ritmo y confianza</span></div>
+            </div>
+            <div class="history-slide">
+              <img src="assets/img/nosotros-2.webp" alt="Fachada de Golden Fight Club">
+              <div><span class="yr">Nuestra casa</span><span class="cap">Golden Fight Club, Duitama</span></div>
+            </div>
+            <div class="history-slide">
+              <img src="assets/img/nosotros-3.webp" alt="Comunidad Golden Fight Club en el ring">
+              <div><span class="yr">La comunidad</span><span class="cap">Familias que entrenan juntas</span></div>
+            </div>
+            <div class="history-slide" data-video>
+              <video src="assets/video/nosotros.mp4" muted loop playsinline preload="metadata"></video>
+              <button class="history-mute" id="historyMute" aria-label="Activar sonido" aria-pressed="false">
+                <svg class="ic-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4V5z"/><path d="M23 9l-6 6M17 9l6 6"/></svg>
+                <svg class="ic-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M11 5 6 9H3v6h3l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+              </button>
+              <div><span class="yr">En movimiento</span><span class="cap">Un round por dentro</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="history-controls">
+          <button class="testi-arrow" id="historyPrev" aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+          <div class="testi-dots" id="historyDots"></div>
+          <button class="testi-arrow" id="historyNext" aria-label="Siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROUND 02 — HORARIOS ============ -->
+<section class="section" id="horarios">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Round 02</span>
+      <h2 class="round-title"><span class="ghost" aria-hidden="true">HORARIOS</span><span class="fg">HORARIOS</span></h2>
+      <p class="lede">Dos franjas entre semana para que entrenes antes o después del trabajo, el colegio o la universidad, y jornada larga los fines de semana. Un solo horario para todos.</p>
+    </div>
+    <span class="info-flag" data-reveal>🥊 Mismo horario para adultos, estudiantes y niños</span>
+    <div class="horarios-grid" data-reveal>
+      <div class="status-card">
+        <span class="pill open" id="statusPill">Consultando…</span>
+        <h3 id="statusHeadline">Un momento…</h3>
+        <small id="statusSub">Calculando con la hora de tu dispositivo.</small>
+      </div>
+      <div>
+        <div class="schedule-list">
+          <div class="schedule-row" data-days="1,2,3,4,5">
+            <span class="day">Lunes a viernes</span>
+            <span class="time">6:00 a.m.–10:00 a.m. · 3:00 p.m.–8:00 p.m.</span>
+          </div>
+          <div class="schedule-row" data-days="0,6">
+            <span class="day">Sábados y domingos</span>
+            <span class="time">8:00 a.m. – 11:00 p.m.</span>
+          </div>
+          <div class="schedule-row">
+            <span class="day">Festivos</span>
+            <span class="time">Cerrado</span>
+          </div>
+        </div>
+        <p class="schedule-note">Válido para todos los niveles y edades — adultos, estudiantes y niños entrenan en estos mismos horarios.</p>
+        <p class="schedule-note">📍 Calle 9 #18-44, Duitama, Boyacá · Instagram <a href="https://instagram.com/goldenfight.club" target="_blank" rel="noopener" style="color:var(--gold-2);">@goldenfight.club</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROUND 03 — PLANES ============ -->
+<section class="section alt" id="planes">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Round 03</span>
+      <h2 class="round-title"><span class="ghost" aria-hidden="true">PLANES</span><span class="fg">PLANES</span></h2>
+      <p class="lede">Elige tu forma de entrenar: membresía mensual, promo para entrenar en pareja o grupo, o paquete de clases a tu ritmo.</p>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Categorías de planes" data-reveal>
+      <button class="tab-btn is-active" data-tab="membresias" role="tab" aria-selected="true">Membresías</button>
+      <button class="tab-btn" data-tab="promos" role="tab" aria-selected="false">Promos</button>
+      <button class="tab-btn" data-tab="personalizados" role="tab" aria-selected="false">Clases personalizadas</button>
+    </div>
+
+    <!-- Membresías -->
+    <div class="plan-panel is-active" data-panel="membresias">
+      <div class="plans-grid">
+        <div class="plan-card">
+          <span class="plan-ribbon">Membresía básica</span>
+          <div class="plan-price">$100.000 <small>/mes</small></div>
+          <ul class="plan-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5"/></svg> Entrada libre al gimnasio por 1 mes</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5"/></svg> 16 clases grupales mensuales (4 semanales, boxeo y/o funcionales)</li>
+          </ul>
+          <a class="btn btn-outline" href="https://wa.me/573138969300?text=%C2%A1Hola%21%20Vi%20la%20Membres%C3%ADa%20B%C3%A1sica%20%28%24100.000%20al%20mes%29%20en%20la%20p%C3%A1gina%20de%20Golden%20Fight%20Club%20y%20me%20gustar%C3%ADa%20inscribirme.%20%C2%BFQu%C3%A9%20necesito%20para%20empezar%3F" target="_blank" rel="noopener">Elegir plan</a>
+        </div>
+        <div class="plan-card featured">
+          <span class="plan-badge">Más popular</span>
+          <span class="plan-ribbon">Membresía premium</span>
+          <div class="plan-price">$150.000 <small>/mes</small></div>
+          <ul class="plan-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5"/></svg> Entrenamientos ilimitados</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5"/></svg> Combinación libre de clases</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5"/></svg> Gimnasio abierto</li>
+          </ul>
+          <a class="btn btn-gold" href="https://wa.me/573138969300?text=%C2%A1Hola%21%20Me%20interesa%20la%20Membres%C3%ADa%20Premium%20%28%24150.000%20al%20mes%29%20de%20Golden%20Fight%20Club.%20%C2%BFPodr%C3%ADan%20contarme%20m%C3%A1s%20sobre%20el%20proceso%20de%20inscripci%C3%B3n%3F" target="_blank" rel="noopener">Elegir plan</a>
+        </div>
+        <div class="plan-card">
+          <span class="plan-ribbon">Membresía 12x30</span>
+          <div class="plan-price">$70.000</div>
+          <p class="plan-per">≈ $5.833 por entrada</p>
+          <ul class="plan-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5"/></svg> 12 entradas en 1 mes</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5"/></svg> Gimnasio abierto</li>
+          </ul>
+          <a class="btn btn-outline" href="https://wa.me/573138969300?text=%C2%A1Hola%21%20Me%20interesa%20la%20Membres%C3%ADa%2012x30%20%28%2470.000%29%20que%20vi%20en%20la%20p%C3%A1gina%20de%20Golden%20Fight%20Club.%20%C2%BFPodr%C3%ADan%20contarme%20c%C3%B3mo%20funciona%3F" target="_blank" rel="noopener">Elegir plan</a>
+        </div>
+        <div class="plan-card">
+          <span class="plan-ribbon">Sparring</span>
+          <div class="plan-price">$10.000</div>
+          <ul class="plan-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5"/></svg> Sesión de boxeo supervisado en ring</li>
+          </ul>
+          <a class="btn btn-outline" href="https://wa.me/573138969300?text=%C2%A1Hola%21%20Me%20gustar%C3%ADa%20reservar%20una%20sesi%C3%B3n%20de%20Sparring%20supervisado%20en%20ring%20%28%2410.000%29.%20%C2%BFQu%C3%A9%20d%C3%ADas%20tienen%20disponibilidad%3F" target="_blank" rel="noopener">Reservar</a>
+        </div>
+        <div class="plan-card">
+          <span class="plan-ribbon">Clase suelta</span>
+          <ul class="plan-features" style="margin-top:.3rem;">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5"/></svg> Clase grupal — <b style="color:var(--gold-2);">$12.000</b></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5"/></svg> Entrada al gym — <b style="color:var(--gold-2);">$8.000</b></li>
+          </ul>
+          <a class="btn btn-outline" href="https://wa.me/573138969300?text=%C2%A1Hola%21%20Me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20clase%20suelta%20y%20la%20entrada%20al%20gimnasio%20por%20d%C3%ADa.%20%C2%BFC%C3%B3mo%20funciona%20y%20cu%C3%A1l%20es%20el%20proceso%3F" target="_blank" rel="noopener">Consultar</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Promos -->
+    <div class="plan-panel" data-panel="promos">
+      <div class="plans-grid">
+        <div class="plan-card">
+          <span class="plan-ribbon">Trío</span>
+          <div class="plan-price">$240.000</div>
+          <ul class="plan-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5"/></svg> Plan base para 3 personas</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5"/></svg> o plan base por 3 meses</li>
+          </ul>
+          <a class="btn btn-outline" href="https://wa.me/573138969300?text=%C2%A1Hola%21%20Me%20interesa%20la%20promo%20Tr%C3%ADo%20%28%24240.000%29%20para%20inscribirme%20junto%20con%20dos%20personas%20m%C3%A1s.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20detalles%3F" target="_blank" rel="noopener">Elegir promo</a>
+        </div>
+        <div class="plan-card featured">
+          <span class="plan-badge">Ideal en pareja</span>
+          <span class="plan-ribbon">Plan Duo</span>
+          <div class="plan-price">$180.000</div>
+          <p class="plan-per">$90.000 por persona</p>
+          <ul class="plan-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5"/></svg> Plan base para 2 personas</li>
+          </ul>
+          <a class="btn btn-gold" href="https://wa.me/573138969300?text=%C2%A1Hola%21%20Me%20interesa%20el%20Plan%20Duo%20%28%24180.000%29%20para%20entrenar%20junto%20con%20otra%20persona.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20detalles%20sobre%20c%C3%B3mo%20inscribirnos%3F" target="_blank" rel="noopener">Elegir promo</a>
+        </div>
+        <div class="plan-card">
+          <span class="plan-ribbon">Estudiantes</span>
+          <div class="plan-price">$70.000</div>
+          <ul class="plan-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5"/></svg> Con carné estudiantil vigente</li>
+          </ul>
+          <a class="btn btn-outline" href="https://wa.me/573138969300?text=%C2%A1Hola%21%20Soy%20estudiante%20y%20me%20interesa%20la%20promo%20para%20estudiantes%20%28%2470.000%29%20de%20Golden%20Fight%20Club.%20%C2%BFQu%C3%A9%20necesito%20para%20acceder%20a%20ella%3F" target="_blank" rel="noopener">Elegir promo</a>
+        </div>
+        <div class="plan-card">
+          <span class="plan-badge">Estudiantes</span>
+          <span class="plan-ribbon">Premium estudiante</span>
+          <div class="plan-price">$110.000 <small>/mes</small></div>
+          <ul class="plan-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5"/></svg> Entrenamientos ilimitados</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5"/></svg> Combinación libre de clases</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5"/></svg> Gimnasio abierto por 1 mes</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5"/></svg> Con carné estudiantil vigente</li>
+          </ul>
+          <a class="btn btn-outline" href="https://wa.me/573138969300?text=%C2%A1Hola%21%20Soy%20estudiante%20y%20me%20interesa%20la%20Membres%C3%ADa%20Premium%20Estudiante%20%28%24110.000%20al%20mes%29.%20%C2%BFQu%C3%A9%20debo%20presentar%20para%20acceder%20a%20este%20precio%3F" target="_blank" rel="noopener">Elegir plan</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Personalizados -->
+    <div class="plan-panel" data-panel="personalizados">
+      <div class="pack-grid">
+        <a class="pack-row" href="https://wa.me/573138969300?text=%C2%A1Hola%21%20Me%20interesa%20el%20paquete%20personalizado%20de%201%20clase%20%28%2430.000%29.%20%C2%BFC%C3%B3mo%20puedo%20agendarla%3F" target="_blank" rel="noopener"><span class="n">1 clase</span><span class="p"><b>$30.000</b><span>$30.000 c/u</span></span></a>
+        <a class="pack-row" href="https://wa.me/573138969300?text=%C2%A1Hola%21%20Me%20interesa%20el%20paquete%20personalizado%20de%204%20clases%20%28%24110.000%29.%20%C2%BFC%C3%B3mo%20puedo%20adquirirlo%3F" target="_blank" rel="noopener"><span class="n">4 clases</span><span class="p"><b>$110.000</b><span>$27.500 c/u · ahorras $10.000</span></span></a>
+        <a class="pack-row" href="https://wa.me/573138969300?text=%C2%A1Hola%21%20Me%20interesa%20el%20paquete%20personalizado%20de%206%20clases%20%28%24160.000%29.%20%C2%BFC%C3%B3mo%20puedo%20adquirirlo%3F" target="_blank" rel="noopener"><span class="n">6 clases</span><span class="p"><b>$160.000</b><span>$26.667 c/u · ahorras $20.000</span></span></a>
+        <a class="pack-row" href="https://wa.me/573138969300?text=%C2%A1Hola%21%20Me%20interesa%20el%20paquete%20personalizado%20de%208%20clases%20%28%24215.000%29.%20%C2%BFC%C3%B3mo%20puedo%20adquirirlo%3F" target="_blank" rel="noopener"><span class="n">8 clases</span><span class="p"><b>$215.000</b><span>$26.875 c/u · ahorras $25.000</span></span></a>
+        <a class="pack-row" href="https://wa.me/573138969300?text=%C2%A1Hola%21%20Me%20interesa%20el%20paquete%20personalizado%20de%2012%20clases%20%28%24300.000%29.%20%C2%BFC%C3%B3mo%20puedo%20adquirirlo%3F" target="_blank" rel="noopener"><span class="n">12 clases</span><span class="p"><b>$300.000</b><span>$25.000 c/u · ahorras $60.000</span></span></a>
+        <a class="pack-row" href="https://wa.me/573138969300?text=%C2%A1Hola%21%20Me%20interesa%20el%20paquete%20personalizado%20de%2016%20clases%20%28%24380.000%29.%20%C2%BFC%C3%B3mo%20puedo%20adquirirlo%3F" target="_blank" rel="noopener"><span class="n">16 clases</span><span class="p"><b>$380.000</b><span>$23.750 c/u · ahorras $100.000</span></span></a>
+      </div>
+      <p class="schedule-note">Las clases personalizadas deben redimirse en un plazo máximo de 2 meses desde la fecha de compra. Pasado ese tiempo, las clases no utilizadas pierden su vigencia.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROUND 04 — EQUIPO ============ -->
+<section class="section" id="equipo">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Round 04</span>
+      <h2 class="round-title"><span class="ghost" aria-hidden="true">EQUIPO</span><span class="fg">EQUIPO</span></h2>
+      <p class="lede">El equipo que corrige tu guardia, cuenta tus rounds y te empuja un poco más cada clase.</p>
+    </div>
+    <div class="coach-grid" data-reveal>
+      <div class="coach-card">
+        <div class="coach-avatar"><span>CB</span></div>
+        <h3>Camilo "Barrilete"</h3>
+        <div class="coach-role">Entrenador principal</div>
+        <p class="coach-bio">Lidera los entrenamientos de boxeo: técnica, guardia y trabajo de saco.</p>
+        <div class="coach-social">
+          <a href="https://instagram.com/goldenfight.club" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg></a>
+        </div>
+      </div>
+      <div class="coach-card">
+        <div class="coach-avatar"><span>JC</span></div>
+        <h3>Juan "Colmillo"</h3>
+        <div class="coach-role">Entrenador</div>
+        <p class="coach-bio">Acompaña las clases de boxeo y acondicionamiento físico.</p>
+        <div class="coach-social">
+          <a href="https://instagram.com/goldenfight.club" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg></a>
+        </div>
+      </div>
+      <div class="coach-card">
+        <div class="coach-avatar"><span>NA</span></div>
+        <h3>Natalia</h3>
+        <div class="coach-role">Administración</div>
+        <p class="coach-bio">Gestiona inscripciones, planes y todo lo administrativo del club.</p>
+        <div class="coach-social">
+          <a href="https://instagram.com/goldenfight.club" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg></a>
+        </div>
+      </div>
+      <div class="coach-card">
+        <div class="coach-avatar"><span>SA</span></div>
+        <h3>Salomé</h3>
+        <div class="coach-role">Animadora</div>
+        <p class="coach-bio">Pone la energía en cada clase y en los eventos del club.</p>
+        <div class="coach-social">
+          <a href="https://instagram.com/goldenfight.club" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROUND 05 — GALERÍA ============ -->
+<section class="section alt" id="galeria">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Round 05</span>
+      <h2 class="round-title"><span class="ghost" aria-hidden="true">GALERÍA</span><span class="fg">GALERÍA</span></h2>
+      <p class="lede">Un vistazo al gimnasio, las clases y la comunidad.</p>
+    </div>
+    <span class="placeholder-flag" data-reveal>📸 Espacios de ejemplo — sube aquí fotos reales del gimnasio</span>
+    <div class="gallery-grid" data-reveal>
+      <button class="gallery-tile tall" style="background:linear-gradient(160deg,#3a2c12,#0b0b0d);" data-caption="Trabajo de saco — técnica y potencia."><img src="fotos/galeria-1.jpg" alt="" onerror="this.remove()"><span>Trabajo de saco</span></button>
+      <button class="gallery-tile" style="background:linear-gradient(160deg,#2a1f45,#0b0b0d);" data-caption="Clase grupal de boxeo."><img src="fotos/galeria-2.jpg" alt="" onerror="this.remove()"><span>Clase grupal</span></button>
+      <button class="gallery-tile" style="background:linear-gradient(160deg,#3a2c12,#0b0b0d);" data-caption="Sesión de sparring supervisado."><img src="fotos/galeria-3.jpg" alt="" onerror="this.remove()"><span>Sparring en ring</span></button>
+      <button class="gallery-tile tall" style="background:linear-gradient(160deg,#2a1f45,#0b0b0d);" data-caption="Zona de acondicionamiento físico."><img src="fotos/galeria-4.jpg" alt="" onerror="this.remove()"><span>Acondicionamiento</span></button>
+      <button class="gallery-tile" style="background:linear-gradient(160deg,#3a2c12,#0b0b0d);" data-caption="Instalaciones del gimnasio."><img src="fotos/galeria-5.jpg" alt="" onerror="this.remove()"><span>Instalaciones</span></button>
+      <button class="gallery-tile" style="background:linear-gradient(160deg,#2a1f45,#0b0b0d);" data-caption="Torneos y eventos internos."><img src="fotos/galeria-6.jpg" alt="" onerror="this.remove()"><span>Eventos</span></button>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+  <div class="lightbox-inner">
+    <div class="lightbox-media" id="lightboxMedia"></div>
+    <div class="lightbox-cap">
+      <span id="lightboxCap"></span>
+      <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ROUND 06 — EVENTOS ============ -->
+<section class="section" id="eventos">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Round 06</span>
+      <h2 class="round-title"><span class="ghost" aria-hidden="true">EVENTOS</span><span class="fg">EVENTOS</span></h2>
+      <p class="lede">Torneos, jornadas de sparring y masterclasses — así se mide el progreso.</p>
+    </div>
+    <span class="placeholder-flag" data-reveal>🗓️ Eventos de ejemplo — actualiza con tus fechas reales</span>
+    <div class="events-grid" data-reveal>
+      <div class="event-card">
+        <div class="event-date"><div class="box"><b>14</b><small>Sep</small></div></div>
+        <h3>Torneo interno Golden Fight Club</h3>
+        <p>Combates amistosos entre miembros de todos los niveles, con jueces y premiación.</p>
+        <a class="btn btn-sm btn-outline" href="https://wa.me/573138969300?text=%C2%A1Hola%21%20Vi%20que%20van%20a%20hacer%20un%20torneo%20interno%20en%20Golden%20Fight%20Club%20y%20me%20gustar%C3%ADa%20participar.%20%C2%BFCu%C3%A1les%20son%20los%20requisitos%20y%20las%20fechas%3F" target="_blank" rel="noopener">Más información</a>
+      </div>
+      <div class="event-card">
+        <div class="event-date"><div class="box"><b>28</b><small>Sep</small></div></div>
+        <h3>Jornada de sparring abierto</h3>
+        <p>Sesión supervisada de sparring para quienes quieren llevar su técnica al ring.</p>
+        <a class="btn btn-sm btn-outline" href="https://wa.me/573138969300?text=%C2%A1Hola%21%20Vi%20en%20la%20p%C3%A1gina%20que%20tienen%20una%20jornada%20de%20sparring%20abierto%20y%20me%20gustar%C3%ADa%20participar.%20%C2%BFMe%20podr%C3%ADan%20contar%20la%20fecha%2C%20la%20hora%20y%20los%20requisitos%3F" target="_blank" rel="noopener">Más información</a>
+      </div>
+      <div class="event-card">
+        <div class="event-date"><div class="box"><b>05</b><small>Oct</small></div></div>
+        <h3>Masterclass de técnica</h3>
+        <p>Clase especial enfocada en fundamentos: guardia, desplazamiento y combinaciones.</p>
+        <a class="btn btn-sm btn-outline" href="https://wa.me/573138969300?text=%C2%A1Hola%21%20Me%20interesa%20la%20masterclass%20de%20t%C3%A9cnica%20que%20anuncian%20en%20la%20p%C3%A1gina.%20%C2%BFPodr%C3%ADan%20contarme%20el%20horario%20y%20si%20hay%20cupos%20disponibles%3F" target="_blank" rel="noopener">Más información</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROUND 07 — RESEÑAS ============ -->
+<section class="section alt" id="resenas">
+  <div class="wrap">
+    <div class="section-head" data-reveal style="text-align:center;margin-left:auto;margin-right:auto;">
+      <span class="eyebrow" style="justify-content:center;">Round 07</span>
+      <h2 class="round-title"><span class="ghost" aria-hidden="true">RESEÑAS</span><span class="fg">RESEÑAS</span></h2>
+      <p class="lede" style="margin:0 auto;">Lo que dicen quienes ya suben al ring con nosotros.</p>
+    </div>
+    <span class="placeholder-flag" data-reveal style="display:flex;width:fit-content;margin:0 auto 1.6rem;">💬 Reseñas de ejemplo — reemplaza con las de tus miembros reales</span>
+
+    <div class="testi-wrap" data-reveal>
+      <div class="testi-track-outer">
+        <div class="testi-track" id="testiTrack">
+          <div class="testi-slide">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"Llegué sin saber nada de boxeo y en dos meses ya entiendo mi guardia, mi respiración y mi ritmo. Los entrenadores corrigen todo con paciencia."</p>
+            <div class="testi-name">— Miembro Golden Fight Club</div>
+          </div>
+          <div class="testi-slide">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"El ambiente es exigente pero muy sano. Las clases de acondicionamiento me cambiaron la resistencia por completo."</p>
+            <div class="testi-name">— Miembro Golden Fight Club</div>
+          </div>
+          <div class="testi-slide">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"El plan 12x30 me quedó perfecto para mi horario de trabajo. Y el sparring supervisado se siente muy seguro."</p>
+            <div class="testi-name">— Miembro Golden Fight Club</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-controls">
+        <button class="testi-arrow" id="testiPrev" aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+        <div class="testi-dots" id="testiDots"></div>
+        <button class="testi-arrow" id="testiNext" aria-label="Siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROUND 08 — UBICACIÓN ============ -->
+<section class="section" id="ubicacion">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Round 08</span>
+      <h2 class="round-title"><span class="ghost" aria-hidden="true">UBICACIÓN</span><span class="fg">UBICACIÓN</span></h2>
+      <p class="lede">Visítanos en Duitama, Boyacá. Escríbenos si tienes dudas para llegar.</p>
+    </div>
+    <div class="loc-grid" data-reveal>
+      <div class="loc-card">
+        <div class="loc-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-7.2-7-12a7 7 0 0 1 14 0c0 4.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          <div>
+            <h4>Dirección</h4>
+            <p>Calle 9 #18-44, Duitama, Boyacá</p>
+          </div>
+        </div>
+        <div class="loc-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+          <div>
+            <h4>Horario</h4>
+            <p>Lun–Vie 6:00–10:00 a.m. y 3:00–8:00 p.m. · Sáb–Dom 8:00 a.m.–11:00 p.m. · Festivos cerrado</p>
+          </div>
+        </div>
+        <div class="loc-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h4l2 5-2.5 1.5a12 12 0 0 0 6 6L15 14l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 2 6a2 2 0 0 1 2-2z"/></svg>
+          <div>
+            <h4>WhatsApp</h4>
+            <a href="https://wa.me/573138969300" target="_blank" rel="noopener">+57 313 896 9300</a>
+          </div>
+        </div>
+        <div class="loc-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+          <div>
+            <h4>Instagram</h4>
+            <a href="https://instagram.com/goldenfight.club" target="_blank" rel="noopener">@goldenfight.club</a>
+          </div>
+        </div>
+        <a class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&destination=Calle+9+%2318-44%2C+Duitama%2C+Boyac%C3%A1" target="_blank" rel="noopener">Cómo llegar</a>
+      </div>
+      <div class="map-frame">
+        <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Calle+9+%2318-44%2C+Duitama%2C+Boyac%C3%A1%2C+Colombia&output=embed" title="Mapa de ubicación — Golden Fight Club, Calle 9 #18-44, Duitama"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/img/logo.webp" alt="Golden Fight Club">
+        <p>Club de boxeo y acondicionamiento físico en Duitama, Boyacá. Entrena tu técnica, tu fuerza y tu disciplina.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/goldenfight.club" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.4c0-.87.24-1.46 1.5-1.46H16.5V4.3c-.26-.03-1.15-.1-2.19-.1-2.17 0-3.66 1.32-3.66 3.75v2.55H8.2v3h2.45V21h2.85z"/></svg></a>
+          <a href="https://wa.me/573138969300" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.02 3C9.4 3 4 8.4 4 15.02c0 2.4.7 4.63 1.92 6.5L4 29l7.66-1.9a11.9 11.9 0 0 0 4.36.82h.01c6.62 0 12.02-5.4 12.02-12.02C28.05 8.4 22.65 3 16.02 3zm7.02 17.13c-.3.83-1.7 1.6-2.36 1.7-.6.1-1.36.14-2.2-.14a13.3 13.3 0 0 1-4.66-2.9 13.9 13.9 0 0 1-2.86-3.9c-.36-.7-.05-1.08.28-1.42.3-.3.66-.78 1-1.17.34-.4.44-.68.66-1.13.22-.45.1-.84-.06-1.18-.16-.33-1.47-3.55-2-4.86-.53-1.28-1.06-1.1-1.46-1.12-.38-.02-.8-.02-1.24-.02-.44 0-1.14.16-1.74.82-.6.66-2.28 2.22-2.28 5.42 0 3.2 2.33 6.3 2.66 6.73.33.44 4.58 6.98 11.1 9.8.96.4 1.5.4 2.1.33.7-.08 2.13-.87 2.44-1.7.3-.83.3-1.55.2-1.7-.08-.15-.3-.24-.6-.4z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Secciones</h5>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#horarios">Horarios</a>
+        <a href="#planes">Planes</a>
+        <a href="#equipo">Equipo</a>
+      </div>
+      <div class="footer-col">
+        <h5>Más</h5>
+        <a href="#galeria">Galería</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#resenas">Reseñas</a>
+        <a href="#ubicacion">Ubicación</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contacto</h5>
+        <p>Calle 9 #18-44, Duitama</p>
+        <a href="https://wa.me/573138969300" target="_blank" rel="noopener">+57 313 896 9300</a>
+        <a href="https://instagram.com/goldenfight.club" target="_blank" rel="noopener">@goldenfight.club</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Golden Fight Club. Todos los derechos reservados.</span>
+      <span>Duitama, Boyacá — Colombia</span>
+    </div>
+  </div>
+  <div class="footer-stripe"></div>
+</footer>
+
+<a class="fab" href="https://wa.me/573138969300?text=%C2%A1Hola%21%20Vi%20la%20p%C3%A1gina%20web%20de%20Golden%20Fight%20Club%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20los%20entrenamientos%2C%20los%20horarios%20y%20los%20planes%20disponibles.%20%C2%A1Gracias%21" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.02 3C9.4 3 4 8.4 4 15.02c0 2.4.7 4.63 1.92 6.5L4 29l7.66-1.9a11.9 11.9 0 0 0 4.36.82h.01c6.62 0 12.02-5.4 12.02-12.02C28.05 8.4 22.65 3 16.02 3zm7.02 17.13c-.3.83-1.7 1.6-2.36 1.7-.6.1-1.36.14-2.2-.14a13.3 13.3 0 0 1-4.66-2.9 13.9 13.9 0 0 1-2.86-3.9c-.36-.7-.05-1.08.28-1.42.3-.3.66-.78 1-1.17.34-.4.44-.68.66-1.13.22-.45.1-.84-.06-1.18-.16-.33-1.47-3.55-2-4.86-.53-1.28-1.06-1.1-1.46-1.12-.38-.02-.8-.02-1.24-.02-.44 0-1.14.16-1.74.82-.6.66-2.28 2.22-2.28 5.42 0 3.2 2.33 6.3 2.66 6.73.33.44 4.58 6.98 11.1 9.8.96.4 1.5.4 2.1.33.7-.08 2.13-.87 2.44-1.7.3-.83.3-1.55.2-1.7-.08-.15-.3-.24-.6-.4z"/></svg></a>
+<button class="to-top" id="toTop" aria-label="Volver arriba"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6-6 6 6"/></svg></button>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>

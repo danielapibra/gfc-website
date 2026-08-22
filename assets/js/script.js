@@ -22,9 +22,9 @@ document.getElementById('roundTime') && (function(){
   setInterval(tick, 1000);
 })();
 
-// Live-Status Geöffnet/Geschlossen — Lun–Vie: 2 Franjas · Sáb–Dom: 1 Franja · Festivos: cerrado (keine automatische Feiertagserkennung)
+// Live-Status Geöffnet/Geschlossen — Lun–Vie: 2 Franjas · Sáb–Dom: 8-11 Uhr · Festivos: cerrado (keine automatische Feiertagserkennung)
 function getWindows(day){
-  return (day>=1 && day<=5) ? [[6,10],[15,20]] : [[8,23]];
+  return (day>=1 && day<=5) ? [[6,10],[15,20]] : [[8,11]];
 }
 function formatHour(h){
   const suffix = h>=12 ? 'p.m.' : 'a.m.';
@@ -156,28 +156,83 @@ document.querySelectorAll('.tab-btn').forEach(btn=>{
   });
 });
 
-// Galerie-Lightbox
+// Galerie-Lightbox: Fotos lassen sich durchblättern (Pfeile, Pfeiltasten,
+// Wischen), ohne die Ansicht zwischendurch zu schließen
 const lightbox = document.getElementById('lightbox');
 const lightboxMedia = document.getElementById('lightboxMedia');
 const lightboxCap = document.getElementById('lightboxCap');
-document.querySelectorAll('.gallery-tile').forEach(tile=>{
-  tile.addEventListener('click', ()=>{
-    const img = tile.querySelector('img');
-    if(img){
-      lightboxMedia.style.background = 'none';
-      lightboxMedia.innerHTML = '<img src="'+img.src+'" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">';
-    } else {
-      lightboxMedia.innerHTML = '';
-      lightboxMedia.style.background = getComputedStyle(tile).background;
-    }
-    lightboxCap.textContent = tile.getAttribute('data-caption');
-    lightbox.classList.add('is-open');
-  });
-});
-function closeLightbox(){ lightbox.classList.remove('is-open'); }
+const lightboxCount = document.getElementById('lightboxCount');
+const tiles = [...document.querySelectorAll('.gallery-tile')];
+let li = 0, tileAbierta = null;
+
+const reducedMotionLb = matchMedia('(prefers-reduced-motion: reduce)');
+
+function mostrarFoto(i){
+  li = (i + tiles.length) % tiles.length;
+  const tile = tiles[li];
+  const fuenteVideo = tile.getAttribute('data-video');
+  const img = tile.querySelector('img');
+  lightboxMedia.style.background = '';
+  if(fuenteVideo){
+    // Video-Kachel: echter Player mit Bedienleiste statt Standbild.
+    // Der Klick auf die Kachel zählt als Nutzeraktion, deshalb darf die
+    // Wiedergabe hier mit Ton starten -- reduzierte Bewegung respektiert.
+    const video = document.createElement('video');
+    video.src = fuenteVideo;
+    video.controls = true;
+    video.playsInline = true;
+    video.preload = 'metadata';
+    if(img) video.poster = img.src;
+    lightboxMedia.replaceChildren(video);
+    if(!reducedMotionLb.matches) video.play().catch(()=>{});
+  } else if(img){
+    const grande = document.createElement('img');
+    grande.src = img.src;
+    grande.alt = img.alt;
+    lightboxMedia.replaceChildren(grande);
+  } else {
+    lightboxMedia.replaceChildren();
+    lightboxMedia.style.background = getComputedStyle(tile).background;
+  }
+  lightboxCap.textContent = tile.getAttribute('data-caption');
+  lightboxCount.textContent = (li + 1) + ' / ' + tiles.length;
+}
+
+function abrirLightbox(i){
+  tileAbierta = tiles[i];
+  mostrarFoto(i);
+  lightbox.classList.add('is-open');
+  document.getElementById('lightboxClose').focus();
+}
+function closeLightbox(){
+  lightbox.classList.remove('is-open');
+  // Inhalt leeren, sonst läuft ein Video unsichtbar weiter -- man hört es
+  lightboxMedia.replaceChildren();
+  // Fokus zurück auf die Kachel, von der aus geöffnet wurde
+  if(tileAbierta){ tileAbierta.focus(); tileAbierta = null; }
+}
+
+tiles.forEach((tile, i)=> tile.addEventListener('click', ()=>abrirLightbox(i)));
+document.getElementById('lightboxPrev').addEventListener('click', ()=>mostrarFoto(li-1));
+document.getElementById('lightboxNext').addEventListener('click', ()=>mostrarFoto(li+1));
 document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
 lightbox.addEventListener('click', (e)=>{ if(e.target === lightbox) closeLightbox(); });
-document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeLightbox(); });
+document.addEventListener('keydown', (e)=>{
+  if(!lightbox.classList.contains('is-open')) return;
+  if(e.key === 'Escape') closeLightbox();
+  if(e.key === 'ArrowLeft') mostrarFoto(li-1);
+  if(e.key === 'ArrowRight') mostrarFoto(li+1);
+});
+
+// Wischen auf dem Handy
+let xIni = null;
+lightbox.addEventListener('touchstart', (e)=>{ xIni = e.changedTouches[0].clientX; }, {passive:true});
+lightbox.addEventListener('touchend', (e)=>{
+  if(xIni === null) return;
+  const dx = e.changedTouches[0].clientX - xIni;
+  if(Math.abs(dx) > 45) mostrarFoto(dx < 0 ? li+1 : li-1);
+  xIni = null;
+}, {passive:true});
 
 // Reseñas-Karussell
 const testiTrack = document.getElementById('testiTrack');
@@ -209,54 +264,101 @@ document.querySelector('.testi-wrap').addEventListener('mouseleave', startTestiA
 document.querySelector('.testi-wrap').addEventListener('focusin', stopTestiAutoplay);
 document.querySelector('.testi-wrap').addEventListener('focusout', startTestiAutoplay);
 
-// Nosotros-Karussell: 3 Fotos + 1 Video, wechselt automatisch alle 5s, manuell jederzeit änderbar
+// Nosotros-Karussell: 3 Fotos + 1 Video. Die Fotos wechseln alle 5s, der
+// Video-Slide bleibt stehen, bis das Video einmal komplett gelaufen ist.
 (function(){
   const track = document.getElementById('historyTrack');
   if(!track) return;
   const slides = track.children;
   const dotsWrap = document.getElementById('historyDots');
+  const wrap = document.querySelector('.history-wrap');
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  const vid = track.querySelector('video');
+  const videoIndex = [...slides].findIndex(s => s.querySelector('video'));
   let hi = 0, auto;
+  let held = false;     // Maus oder Tastaturfokus im Karussell
+  let visible = true;   // Karussell im sichtbaren Bereich
+
+  // Video nur abspielen, wenn es auch jemand sehen kann
+  function mayPlay(){ return visible && !reducedMotion.matches; }
+  // Automatisch weiterschalten zusätzlich nur ohne Maus/Fokus im Karussell
+  function mayAdvance(){ return mayPlay() && !held; }
 
   for(let i=0;i<slides.length;i++){
     const d = document.createElement('button');
     d.className = 'testi-dot' + (i===0 ? ' is-active' : '');
     d.setAttribute('aria-label', 'Ir a la foto '+(i+1));
-    d.addEventListener('click', ()=>{ goTo(i); reset(); });
+    d.addEventListener('click', ()=>goTo(i));
     dotsWrap.appendChild(d);
   }
+
   function goTo(i){
     hi = (i + slides.length) % slides.length;
     track.style.transform = 'translateX(-'+(hi*100)+'%)';
     [...dotsWrap.children].forEach((d,idx)=>d.classList.toggle('is-active', idx===hi));
+    syncVideo();
+    start();
   }
-  function start(){
-    if(reducedMotion.matches) return;
-    const currentSlide = slides[hi];
-    // Beim Video-Slide kein automatisches Weiterschalten — der Nutzer steuert selbst
-    if(currentSlide.querySelector('video')){
-      stop();
-      return;
+
+  // Das Video läuft nur auf seinem eigenen Slide und immer von vorn
+  function syncVideo(){
+    if(!vid) return;
+    if(hi === videoIndex){
+      if(vid.readyState > 0) vid.currentTime = 0;
+      if(mayPlay()) vid.play().catch(()=>{});
+    }else{
+      vid.pause();
+      if(vid.readyState > 0) vid.currentTime = 0;
+      // Ein Slide vorher komplett vorladen, damit das Video sofort anläuft
+      if(hi === videoIndex - 1 && vid.preload !== 'auto'){
+        vid.preload = 'auto';
+        vid.load();
+      }
     }
+  }
+
+  function start(){
+    stop();
+    if(!mayAdvance()) return;
+    // Auf dem Video-Slide schaltet erst das 'ended'-Ereignis weiter
+    if(hi === videoIndex) return;
     auto = setInterval(()=>goTo(hi+1), 5000);
   }
   function stop(){ clearInterval(auto); }
-  function reset(){ stop(); start(); }
 
-  document.getElementById('historyPrev').addEventListener('click', ()=>{ goTo(hi-1); reset(); });
-  document.getElementById('historyNext').addEventListener('click', ()=>{ goTo(hi+1); reset(); });
-  const wrap = document.querySelector('.history-wrap');
-  wrap.addEventListener('mouseenter', stop);
-  wrap.addEventListener('mouseleave', start);
-  wrap.addEventListener('focusin', stop);
-  wrap.addEventListener('focusout', start);
-  start();
+  // Nach Pause (Hover, Fokus, außerhalb des Bildschirms) da weitermachen,
+  // wo das Karussell stehengeblieben ist
+  function resume(){
+    if(vid && hi === videoIndex){
+      if(vid.ended && mayAdvance()){ goTo(hi+1); return; }
+      if(!vid.ended && mayPlay()) vid.play().catch(()=>{});
+      return;
+    }
+    start();
+  }
 
-  // Kein natives autoplay-Attribut am <video> (siehe index.html) -- so respektiert
-  // die Wiedergabe reduzierte Bewegung genau wie der Foto-Wechsel oben.
-  const vid = track.querySelector('video');
-  if(vid && !reducedMotion.matches){
-    vid.play().catch(()=>{});
+  document.getElementById('historyPrev').addEventListener('click', ()=>goTo(hi-1));
+  document.getElementById('historyNext').addEventListener('click', ()=>goTo(hi+1));
+  wrap.addEventListener('mouseenter', ()=>{ held = true; stop(); });
+  wrap.addEventListener('mouseleave', ()=>{ held = false; resume(); });
+  wrap.addEventListener('focusin', ()=>{ held = true; stop(); });
+  wrap.addEventListener('focusout', ()=>{ held = false; resume(); });
+
+  // Karussell und Video pausieren, solange die Sektion nicht im Bild ist —
+  // sonst wäre das Video vorbei, bevor der Nutzer überhaupt hinscrollt
+  if('IntersectionObserver' in window){
+    new IntersectionObserver((entries)=>{
+      visible = entries[0].isIntersecting;
+      if(visible){ resume(); }
+      else { stop(); if(vid) vid.pause(); }
+    }, {threshold: 0.35}).observe(wrap);
+  }
+
+  // Kein natives autoplay-Attribut und kein loop am <video> (siehe index.html):
+  // so respektiert die Wiedergabe reduzierte Bewegung genau wie der Foto-
+  // Wechsel, und 'ended' kann das Karussell weiterschalten.
+  if(vid){
+    vid.addEventListener('ended', ()=>{ if(mayAdvance()) goTo(hi+1); });
   }
 
   const muteBtn = document.getElementById('historyMute');
@@ -269,4 +371,6 @@ document.querySelector('.testi-wrap').addEventListener('focusout', startTestiAut
       muteBtn.querySelector('.ic-on').style.display = vid.muted ? 'none' : '';
     });
   }
+
+  start();
 })();

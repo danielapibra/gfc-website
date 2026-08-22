@@ -26,6 +26,10 @@ aus Branch `main`.
   reduzierter Bewegung gestartet).
 - Bei CSS Grid immer `minmax(0, 1fr)` statt bloßem `1fr` — sonst bricht das
   Layout auf dem Handy.
+- `styles.css` und `script.js` werden in `index.html` mit `?v=N` verlinkt.
+  Nach jeder Änderung an diesen Dateien N hochzählen -- sonst liefern
+  Browser (und GitHub Pages) noch tagelang die alte Version aus. Genau das
+  hat einmal so ausgesehen, als sei ein Fix nicht angekommen.
 - Bilder vor dem Commit komprimieren, als `.webp` ablegen, Ziel < 300 KB.
   Videos bleiben `.mp4`, möglichst < 3 MB.
 - Keine Tokens, Passwörter oder privaten Mitgliederdaten im Repo.
@@ -65,7 +69,7 @@ assets/
   css/styles.css   -- Abschnitt 1 = Design-Tokens
   js/script.js     -- Rundenuhr, Live-Status, Menü, Karussells, Tabs, Lightbox
   img/             -- .webp, < 300 KB
-  video/           -- Nosotros-Karussell, 4. Slide
+  video/           -- nosotros.mp4 (Karussell), espacios.mp4 (Galería)
 ```
 
 ### Bereiche auf der Seite (in dieser Reihenfolge)
@@ -75,13 +79,33 @@ assets/
 2. Laufendes Ticker-Band + Valores-Marquee (dekorativ, `aria-hidden`)
 3. **Nosotros** (`#nosotros`) — Historia-Text + Karussell mit 3 Fotos
    und 1 Video als viertem Slide (`#historyTrack`)
-4. Horarios (`#horarios`) — Live-Status-Karte + Wochenplan
+4. Horarios (`#horarios`) — Live-Status-Karte + Wochenplan.
+   **Echte Zeiten: Mo–Fr 6–10 Uhr und 15–20 Uhr, Sa+So 8–11 Uhr,
+   Feiertage geschlossen.** Stehen an zwei Stellen und müssen zusammen
+   geändert werden: als Text in `index.html` (`.schedule-row`) und als
+   Zahlen in `getWindows()` in `script.js` — sonst zeigt die Live-Karte
+   etwas anderes an als der Wochenplan.
 5. Planes (`#planes`) — Tabs (Membresías/Promos/Clases), **echte
    Preise** ($100.000 / $150.000 pro Monat, Stand siehe Git-Historie —
    bei Änderung durch Daniela hier direkt in `index.html` anpassen)
 6. Equipo (`#equipo`) — echtes Team (Camilo, Juan, Natalia, Salomé)
-7. Galería (`#galeria`) — Platzhalter-Kacheln, erwarten
-   `fotos/galeria-1.jpg` … `galeria-6.jpg` (noch nicht im Repo)
+7. Galería (`#galeria`) — 1 Video + 5 Fotos, darunter zwei vom Aufbau des
+   Gyms. Bewusste Regeln von Daniela: **keine Fotos mit Kindern** und
+   **keine Motive, die schon im Nosotros-Karussell laufen** (Sparring,
+   Fassade, Presentación im Ring).
+   - Erste Kachel ist der Rundgang (`assets/video/espacios.mp4`,
+     `.gallery-tile.feature` mit `data-video`), belegt einen 2x2-Block.
+     Dahinter zwei `.tall` (je 1x2), eine `.wide` (2x1) und zwei einfache:
+     4+2+2+2+1+1 = 12 Rasterfelder — geht bei 4, 3 und 2 Spalten glatt
+     auf. Wer Kacheln hinzufügt oder entfernt, muss diese Rechnung neu
+     aufmachen, sonst entstehen Löcher im Raster.
+   - Fotos in `assets/img/galeria-1/-4/-6/-7/-8.webp` (die Nummern 2, 3
+     und 5 hat Daniela aussortiert), Poster des Videos in
+     `galeria-video-poster.webp`.
+   - Klick öffnet die Lightbox — dort per Pfeilbutton, Pfeiltaste oder
+     Wischgeste durchblättern, Escape schließt. Die Video-Kachel öffnet
+     einen echten Player mit Bedienleiste; beim Schließen wird der Inhalt
+     geleert, sonst läuft der Ton unsichtbar weiter.
 8. Eventos (`#eventos`) — als Beispiel gekennzeichnet
    (`.placeholder-flag`), Daten sind erfunden
 9. Reseñas (`#resenas`) — als Beispiel gekennzeichnet, Zitate sind erfunden
@@ -93,13 +117,26 @@ assets/
 - Vor jedem Push: Seite lokal rendern (`python3 -m http.server 8000`) und
   in Desktop- UND Handybreite per Screenshot prüfen.
 - Commit-Nachrichten auf Deutsch, sprechend.
+- Die Original-Fotos (Kamera-JPEGs, 5-20 MB) liegen bewusst außerhalb des
+  Repos unter `~/Desktop/Golden Fight Club/Fotos`. Für die Website mit
+  Pillow auf 1400 px lange Kante verkleinern und als WebP q82 speichern
+  (`python3` + `PIL`) -- ergibt 35-90 KB pro Bild. `sips` kann kein WebP
+  schreiben, `cwebp`/ImageMagick sind nicht installiert.
+- Videos: auf dem Rechner ist **kein ffmpeg**. `avconvert` (Bordmittel)
+  kennt nur Presets und trifft die Zielgröße nicht -- aus dem 237-MB-4K-
+  Original wurden damit entweder 32 MB oder 1 MB. Dafür liegt ein kleines
+  Swift-Werkzeug unter `~/Desktop/Golden Fight Club/vidtool.swift`
+  (`swiftc -O -o vidtool vidtool.swift`), das Bitrate und Höhe direkt
+  setzt und ein Poster-Bild zieht:
+  `./vidtool --in gross.mov --out klein.mp4 --maxHeight 960 --bitrate 380000 --audioBitrate 48000 --poster poster.jpg --posterAt 1`
+  Ergebnis für `espacios.mp4`: 540x960, 2,8 MB aus 237 MB. Wichtig im
+  Werkzeug: Video- und Tonspur **abwechselnd** füttern -- füllt man erst
+  die Videospur komplett, blockiert der Writer und wartet ewig auf Ton.
 - Vor dem ersten Push in einer neuen Session einmal fragen, ob es losgehen
   darf. Danach eigenständig pushen.
 
 ## Offene Punkte
 
-- Galería: echte Fotos statt Platzhalter-Kacheln (`fotos/galeria-*.jpg`
-  fehlen aktuell komplett im Repo)
 - Eventos: echte Termine statt Beispieldaten
 - Reseñas: echte Kundenstimmen statt Beispiel-Zitate
 - Logo als Vektor (SVG) statt PNG→WebP-Export

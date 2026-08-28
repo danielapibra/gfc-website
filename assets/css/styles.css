@@ -92,13 +92,13 @@ section{position:relative;}
 .eyebrow::before{content:'';width:22px;height:2px;background:var(--gold);display:inline-block;}
 
 /* section title with shadow-duplicate (matches print flyers) */
-.round-title{position:relative;display:inline-block;font-size:clamp(2.6rem,8.4vw,5.6rem);line-height:.86;margin:.3em 0 .5em;color:var(--white);transform:rotate(-1.1deg);}
+.round-title{position:relative;display:inline-block;font-size:clamp(2.6rem,8.4vw,5.6rem);line-height:.86;margin:.3em 0 .38em;color:var(--white);transform:rotate(-1.1deg);}
 .round-title .ghost{position:absolute;top:.14em;left:-.07em;color:transparent;-webkit-text-stroke:1.5px rgba(246,242,233,0.14);z-index:0;user-select:none;}
 .round-title .fg{position:relative;z-index:1;color:var(--gold);}
 .round-title.on-bone .ghost{-webkit-text-stroke:1.5px rgba(11,11,13,0.12);}
 .round-title.on-bone .fg{color:#171207;}
 
-.section-head{margin-bottom:2.4rem;}
+.section-head{margin-bottom:1.9rem;}
 .section-head p.lede{max-width:52ch;color:var(--ash);font-size:1.02rem;}
 .on-bone .section-head p.lede{color:#54504a;}
 
@@ -276,14 +276,14 @@ body.menu-open .mobile-menu{opacity:1;transform:translateY(0);pointer-events:aut
 @keyframes facePulse{0%{transform:scale(1);}30%{transform:scale(1.07);text-shadow:0 0 24px var(--purple-glow);}100%{transform:scale(1);}}
 
 /* ============ GENERIC SECTION SPACING ============ */
-.section{padding:5.2rem 0;scroll-margin-top:var(--nav-h);}
-@media(min-width:1080px){.section{padding:7.2rem 0;}}
+.section{padding:3.2rem 0;scroll-margin-top:var(--nav-h);}
+@media(min-width:1080px){.section{padding:4.4rem 0;}}
 .section.on-bone{background:var(--bone);color:#1a1712;}
 .section.alt{background:var(--ink-soft);}
 /* "Quiénes somos" folgt direkt auf das Marquee-Band: mehr Luft nach oben,
    damit der Titel zwischen Band und Inhalt ausbalanciert steht */
-#nosotros{padding-top:7.6rem;}
-@media(min-width:1080px){#nosotros{padding-top:10rem;}}
+#nosotros{padding-top:5rem;}
+@media(min-width:1080px){#nosotros{padding-top:6.6rem;}}
 
 /* reveal-on-scroll */
 [data-reveal]{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease);}

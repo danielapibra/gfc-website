@@ -109,8 +109,14 @@ assets/
      Wischgeste durchblättern, Escape schließt. Die Video-Kachel öffnet
      einen echten Player mit Bedienleiste; beim Schließen wird der Inhalt
      geleert, sonst läuft der Ton unsichtbar weiter.
-9. Eventos (`#eventos`) — als Beispiel gekennzeichnet
-   (`.placeholder-flag`), Daten sind erfunden
+9. **Clases grupales** (`#clases`, früher "Eventos") — fester Stundenplan
+   der geführten Klassen: Mo-Fr 7:00, 17:00 und 19:00 Boxeo, 18:00
+   Funcional; Sa+So 9:00 Boxeo. Farbcode: Gold = Boxeo, Lila = Funcional.
+   Darunter der Block "Clases especiales y eventos" für Ankündigungen --
+   steht aktuell auf dem Leer-Hinweis (`.avisos-vacio`). Zum Ankündigen
+   eine `.event-card` einhängen und den Leer-Hinweis entfernen (Kommentar
+   steht über der Sektion in `index.html`). Erfundene Termine gibt es hier
+   bewusst nicht mehr.
 10. Reseñas (`#resenas`) — als Beispiel gekennzeichnet, Zitate sind erfunden
 11. Ubicación (`#ubicacion`) — echte Adresse, WhatsApp, Instagram,
     eingebettete Google-Maps-Karte (kein API-Key nötig, nur `?q=...&output=embed`)
@@ -140,7 +146,6 @@ assets/
 
 ## Offene Punkte
 
-- Eventos: echte Termine statt Beispieldaten
 - Reseñas: echte Kundenstimmen statt Beispiel-Zitate
 - Logo als Vektor (SVG) statt PNG→WebP-Export
 - Eigene Domain verbinden

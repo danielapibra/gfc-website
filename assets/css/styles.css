@@ -485,6 +485,27 @@ body.menu-open .mobile-menu{opacity:1;transform:translateY(0);pointer-events:aut
 .lightbox-close{width:38px;height:38px;border:1px solid var(--line);border-radius:3px;display:flex;align-items:center;justify-content:center;flex:none;}
 .lightbox-close svg{width:16px;height:16px;}
 
+/* ============ CLASES GRUPALES ============ */
+/* align-items:start -- sonst zieht das Raster die Wochenend-Karte auf die
+   Höhe der Wochentags-Karte und sie wirkt halb leer */
+.clases-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:1.1rem;align-items:start;}
+@media(min-width:760px){.clases-grid{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:1.4rem;}}
+.clases-col{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem 1.6rem;}
+.clases-dia{font-family:var(--font-label);font-size:.84rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;}
+.clases-lista li{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.85rem 0;border-bottom:1px solid var(--line);}
+.clases-lista li:last-child{border-bottom:none;}
+.clases-lista .hora{font-family:var(--font-label);font-size:1.06rem;font-weight:600;color:var(--bone);letter-spacing:.02em;}
+/* Farbcode: Gold = Boxeo, Lila = Funcional -- beide über Tokens, der Text
+   nutzt die kontraststarken Varianten (--gold-2 / --purple-text) */
+.clase{font-family:var(--font-label);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;padding:.4em .85em;clip-path:var(--notch);white-space:nowrap;}
+.clase.boxeo{background:rgba(205,164,92,.14);border:1px solid var(--gold-deep);color:var(--gold-2);}
+.clase.funcional{background:rgba(109,40,217,.18);border:1px solid var(--purple);color:var(--purple-text);}
+.clases-nota{margin-top:1rem;color:var(--ash-dim);font-size:.88rem;}
+.avisos{margin-top:2.6rem;}
+.avisos-titulo{font-family:var(--font-label);font-size:.84rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
+.avisos-vacio h3{font-family:var(--font-label);font-size:1.02rem;letter-spacing:.03em;font-weight:600;color:var(--bone);text-transform:none;}
+.avisos-vacio .btn{align-self:flex-start;}
+
 /* ============ EVENTOS ============ */
 .events-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:1.4rem;}
 @media(min-width:760px){.events-grid{grid-template-columns:repeat(3,minmax(0,1fr));}}

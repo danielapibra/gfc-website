@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=7">
+<link rel="stylesheet" href="assets/css/styles.css?v=8">
 </head>
 <body>
 
@@ -29,7 +29,7 @@
       <a href="#planes" data-nav>Planes</a>
       <a href="#equipo" data-nav>Equipo</a>
       <a href="#galeria" data-nav>Galería</a>
-      <a href="#eventos" data-nav>Eventos</a>
+      <a href="#clases" data-nav>Clases</a>
       <a href="#resenas" data-nav>Reseñas</a>
       <a href="#ubicacion" data-nav>Ubicación</a>
     </nav>
@@ -49,7 +49,7 @@
   <a href="#planes" data-nav><span class="rn">04</span> Planes</a>
   <a href="#equipo" data-nav><span class="rn">05</span> Equipo</a>
   <a href="#galeria" data-nav><span class="rn">06</span> Galería</a>
-  <a href="#eventos" data-nav><span class="rn">07</span> Eventos</a>
+  <a href="#clases" data-nav><span class="rn">07</span> Clases</a>
   <a href="#resenas" data-nav><span class="rn">08</span> Reseñas</a>
   <a href="#ubicacion" data-nav><span class="rn">09</span> Ubicación</a>
   <a class="btn btn-gold" href="https://wa.me/573138969300?text=%C2%A1Hola%21%20Vi%20la%20p%C3%A1gina%20web%20de%20Golden%20Fight%20Club%20y%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20entrenamientos%20y%20los%20planes%20disponibles.%20%C2%BFPodr%C3%ADan%20ayudarme%3F" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
@@ -459,33 +459,45 @@
   </div>
 </div>
 
-<!-- ============ ROUND 07 — EVENTOS ============ -->
-<section class="section alt" id="eventos">
+<!-- ============ ROUND 07 — CLASES GRUPALES + AVISOS ============ -->
+<!-- Zum Ankündigen einer Sonderklasse oder eines Events: eine .event-card
+     nach dem Muster unten in .events-grid einhängen und den Leer-Hinweis
+     (.avisos-vacio) entfernen. -->
+<section class="section alt" id="clases">
   <div class="wrap">
     <div class="section-head" data-reveal>
       <span class="eyebrow">Round 07</span>
-      <h2 class="round-title"><span class="ghost" aria-hidden="true">EVENTOS</span><span class="fg">EVENTOS</span></h2>
-      <p class="lede">Torneos, jornadas de sparring y masterclasses — así se mide el progreso.</p>
+      <h2 class="round-title"><span class="ghost" aria-hidden="true">CLASES GRUPALES</span><span class="fg">CLASES GRUPALES</span></h2>
+      <p class="lede">Clases dirigidas con entrenador, a la misma hora toda la semana. Llega unos minutos antes para vendarte y calentar.</p>
     </div>
-    <span class="placeholder-flag" data-reveal>🗓️ Eventos de ejemplo — actualiza con tus fechas reales</span>
-    <div class="events-grid" data-reveal>
-      <div class="event-card">
-        <div class="event-date"><div class="box"><b>14</b><small>Sep</small></div></div>
-        <h3>Torneo interno Golden Fight Club</h3>
-        <p>Combates amistosos entre miembros de todos los niveles, con jueces y premiación.</p>
-        <a class="btn btn-sm btn-outline" href="https://wa.me/573138969300?text=%C2%A1Hola%21%20Vi%20que%20van%20a%20hacer%20un%20torneo%20interno%20en%20Golden%20Fight%20Club%20y%20me%20gustar%C3%ADa%20participar.%20%C2%BFCu%C3%A1les%20son%20los%20requisitos%20y%20las%20fechas%3F" target="_blank" rel="noopener">Más información</a>
+
+    <div class="clases-grid" data-reveal>
+      <div class="clases-col">
+        <h3 class="clases-dia">Lunes a viernes</h3>
+        <ul class="clases-lista">
+          <li><span class="hora">7:00 a.m.</span><span class="clase boxeo">Boxeo</span></li>
+          <li><span class="hora">5:00 p.m.</span><span class="clase boxeo">Boxeo</span></li>
+          <li><span class="hora">6:00 p.m.</span><span class="clase funcional">Funcional</span></li>
+          <li><span class="hora">7:00 p.m.</span><span class="clase boxeo">Boxeo</span></li>
+        </ul>
       </div>
-      <div class="event-card">
-        <div class="event-date"><div class="box"><b>28</b><small>Sep</small></div></div>
-        <h3>Jornada de sparring abierto</h3>
-        <p>Sesión supervisada de sparring para quienes quieren llevar su técnica al ring.</p>
-        <a class="btn btn-sm btn-outline" href="https://wa.me/573138969300?text=%C2%A1Hola%21%20Vi%20en%20la%20p%C3%A1gina%20que%20tienen%20una%20jornada%20de%20sparring%20abierto%20y%20me%20gustar%C3%ADa%20participar.%20%C2%BFMe%20podr%C3%ADan%20contar%20la%20fecha%2C%20la%20hora%20y%20los%20requisitos%3F" target="_blank" rel="noopener">Más información</a>
+      <div class="clases-col">
+        <h3 class="clases-dia">Sábados y domingos</h3>
+        <ul class="clases-lista">
+          <li><span class="hora">9:00 a.m.</span><span class="clase boxeo">Boxeo</span></li>
+        </ul>
+        <p class="clases-nota">Fuera de estos horarios el gimnasio sigue abierto para entrenamiento libre.</p>
       </div>
-      <div class="event-card">
-        <div class="event-date"><div class="box"><b>05</b><small>Oct</small></div></div>
-        <h3>Masterclass de técnica</h3>
-        <p>Clase especial enfocada en fundamentos: guardia, desplazamiento y combinaciones.</p>
-        <a class="btn btn-sm btn-outline" href="https://wa.me/573138969300?text=%C2%A1Hola%21%20Me%20interesa%20la%20masterclass%20de%20t%C3%A9cnica%20que%20anuncian%20en%20la%20p%C3%A1gina.%20%C2%BFPodr%C3%ADan%20contarme%20el%20horario%20y%20si%20hay%20cupos%20disponibles%3F" target="_blank" rel="noopener">Más información</a>
+    </div>
+
+    <div class="avisos" data-reveal>
+      <h3 class="avisos-titulo">Clases especiales y eventos</h3>
+      <div class="events-grid">
+        <div class="event-card avisos-vacio">
+          <h3>Por ahora no hay nada programado</h3>
+          <p>Aquí anunciamos masterclasses, jornadas de sparring y torneos. Escríbenos y te avisamos apenas abramos cupos.</p>
+          <a class="btn btn-sm btn-outline" href="https://wa.me/573138969300?text=%C2%A1Hola%21%20Quiero%20que%20me%20avisen%20cuando%20tengan%20clases%20especiales%20o%20eventos%20en%20Golden%20Fight%20Club." target="_blank" rel="noopener">Avísenme</a>
+        </div>
       </div>
     </div>
   </div>
@@ -602,7 +614,7 @@
       <div class="footer-col">
         <h5>Más</h5>
         <a href="#galeria">Galería</a>
-        <a href="#eventos">Eventos</a>
+        <a href="#clases">Clases</a>
         <a href="#resenas">Reseñas</a>
         <a href="#ubicacion">Ubicación</a>
       </div>
@@ -624,6 +636,6 @@
 <a class="fab" href="https://wa.me/573138969300?text=%C2%A1Hola%21%20Vi%20la%20p%C3%A1gina%20web%20de%20Golden%20Fight%20Club%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20los%20entrenamientos%2C%20los%20horarios%20y%20los%20planes%20disponibles.%20%C2%A1Gracias%21" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.02 3C9.4 3 4 8.4 4 15.02c0 2.4.7 4.63 1.92 6.5L4 29l7.66-1.9a11.9 11.9 0 0 0 4.36.82h.01c6.62 0 12.02-5.4 12.02-12.02C28.05 8.4 22.65 3 16.02 3zm7.02 17.13c-.3.83-1.7 1.6-2.36 1.7-.6.1-1.36.14-2.2-.14a13.3 13.3 0 0 1-4.66-2.9 13.9 13.9 0 0 1-2.86-3.9c-.36-.7-.05-1.08.28-1.42.3-.3.66-.78 1-1.17.34-.4.44-.68.66-1.13.22-.45.1-.84-.06-1.18-.16-.33-1.47-3.55-2-4.86-.53-1.28-1.06-1.1-1.46-1.12-.38-.02-.8-.02-1.24-.02-.44 0-1.14.16-1.74.82-.6.66-2.28 2.22-2.28 5.42 0 3.2 2.33 6.3 2.66 6.73.33.44 4.58 6.98 11.1 9.8.96.4 1.5.4 2.1.33.7-.08 2.13-.87 2.44-1.7.3-.83.3-1.55.2-1.7-.08-.15-.3-.24-.6-.4z"/></svg></a>
 <button class="to-top" id="toTop" aria-label="Volver arriba"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6-6 6 6"/></svg></button>
 
-<script src="assets/js/script.js?v=7"></script>
+<script src="assets/js/script.js?v=8"></script>
 </body>
 </html>

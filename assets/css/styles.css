@@ -235,7 +235,10 @@ body.menu-open .mobile-menu{opacity:1;transform:translateY(0);pointer-events:aut
    url(../img/hero-bg-desktop.webp) center 30% / cover no-repeat,
    var(--ink);
 }
-.hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:2.6rem;align-items:center;padding:2.5rem 0 3.5rem;}
+/* Nur oben/unten polstern: die Kurzform 'padding:2.5rem 0 3.5rem' hat den
+   seitlichen Rand von .wrap überschrieben, dadurch klebte der Hero-Text auf
+   dem Handy am Bildschirmrand. */
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:2.6rem;align-items:center;padding-top:2.5rem;padding-bottom:3.5rem;}
 @media(min-width:980px){.hero-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:3rem;}}
 /* Mobile gets its own portrait-cropped photo + a fuller top-to-bottom darkening, since text and photo stack instead of sitting side by side */
 @media(max-width:760px){
@@ -249,7 +252,9 @@ body.menu-open .mobile-menu{opacity:1;transform:translateY(0);pointer-events:aut
   }
 }
 
-.hero h1{font-size:clamp(2.7rem,9.4vw,5.6rem);line-height:.92;margin:.5rem 0 1.1rem;}
+/* line-height knapp unter 1: bei .92 lag die Tilde/der Akzent der unteren
+   Zeile hinter der Zeile darüber -- aus "VERSIÓN" wurde optisch "VERSION". */
+.hero h1{font-size:clamp(2.7rem,9.4vw,5.6rem);line-height:1;margin:.5rem 0 1.1rem;}
 .hero h1 .line{display:block;}
 .hero h1 .white{color:var(--bone);}
 .hero h1 .gold{color:var(--gold);}

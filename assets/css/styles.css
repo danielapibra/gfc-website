@@ -352,6 +352,23 @@ body.menu-open .mobile-menu{opacity:1;transform:translateY(0);pointer-events:aut
 .schedule-row .time{font-family:var(--font-display);font-size:1.15rem;color:var(--gold-2);}
 .schedule-note{margin-top:1rem;font-size:.85rem;color:var(--ash-dim);}
 
+/* ============ ENTRENAMIENTOS ============ */
+.training-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:1rem;}
+@media(min-width:640px){.training-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(min-width:1080px){.training-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:1.2rem;}}
+.training-card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:1.5rem;display:flex;flex-direction:column;gap:.6rem;clip-path:var(--notch);
+  transition:transform .2s var(--ease),border-color .2s,box-shadow .2s;
+}
+.training-card:hover{transform:translate(-3px,-5px);border-color:var(--gold-deep);box-shadow:6px 8px 0 rgba(0,0,0,.5);}
+.training-num{font-family:var(--font-label);font-size:.82rem;letter-spacing:.16em;color:var(--ash-dim);}
+.training-card h3{
+  font-family:var(--font-label);font-size:1.02rem;letter-spacing:.03em;font-weight:600;
+  color:var(--bone);display:flex;align-items:center;gap:.45em;margin-top:.6rem;
+}
+.training-card p{color:var(--ash);font-size:.94rem;}
+
 /* ============ PLANES ============ */
 .tabs{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:2.4rem;}
 .tab-btn{

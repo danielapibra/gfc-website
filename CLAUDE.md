@@ -85,11 +85,14 @@ assets/
    geändert werden: als Text in `index.html` (`.schedule-row`) und als
    Zahlen in `getWindows()` in `script.js` — sonst zeigt die Live-Karte
    etwas anderes an als der Wochenplan.
-5. Planes (`#planes`) — Tabs (Membresías/Promos/Clases), **echte
+5. **Entrenamientos** (`#entrenamientos`) — vier Karten (Boxeo,
+   Acondicionamiento, Competencia, Entrenamiento libre) unter dem Titel
+   "Encuentra tu ritmo". Inhalt kommt aus einem Entwurf von Daniela.
+6. Planes (`#planes`) — Tabs (Membresías/Promos/Clases), **echte
    Preise** ($100.000 / $150.000 pro Monat, Stand siehe Git-Historie —
    bei Änderung durch Daniela hier direkt in `index.html` anpassen)
-6. Equipo (`#equipo`) — echtes Team (Camilo, Juan, Natalia, Salomé)
-7. Galería (`#galeria`) — 1 Video + 5 Fotos, darunter zwei vom Aufbau des
+7. Equipo (`#equipo`) — echtes Team (Camilo, Juan, Natalia, Salomé)
+8. Galería (`#galeria`) — 1 Video + 5 Fotos, darunter zwei vom Aufbau des
    Gyms. Bewusste Regeln von Daniela: **keine Fotos mit Kindern** und
    **keine Motive, die schon im Nosotros-Karussell laufen** (Sparring,
    Fassade, Presentación im Ring).
@@ -106,10 +109,10 @@ assets/
      Wischgeste durchblättern, Escape schließt. Die Video-Kachel öffnet
      einen echten Player mit Bedienleiste; beim Schließen wird der Inhalt
      geleert, sonst läuft der Ton unsichtbar weiter.
-8. Eventos (`#eventos`) — als Beispiel gekennzeichnet
+9. Eventos (`#eventos`) — als Beispiel gekennzeichnet
    (`.placeholder-flag`), Daten sind erfunden
-9. Reseñas (`#resenas`) — als Beispiel gekennzeichnet, Zitate sind erfunden
-10. Ubicación (`#ubicacion`) — echte Adresse, WhatsApp, Instagram,
+10. Reseñas (`#resenas`) — als Beispiel gekennzeichnet, Zitate sind erfunden
+11. Ubicación (`#ubicacion`) — echte Adresse, WhatsApp, Instagram,
     eingebettete Google-Maps-Karte (kein API-Key nötig, nur `?q=...&output=embed`)
 
 ## Arbeitsweise

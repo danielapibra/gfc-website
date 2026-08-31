@@ -61,6 +61,15 @@ Planungsphase. Diese Sektion beschreibt bewusst die IST-Optik.
   das offizielle WhatsApp-Grün — das ist eine fremde Markenfarbe, bewusst
   nicht durch GFC-Tokens ersetzt.
 
+## Navigation
+
+Es gibt **keine waagerechte Menüleiste** mehr. Neun Einträge nebeneinander
+wirkten in der Kopfzeile überladen, deshalb liegt die komplette Navigation
+auf jeder Bildschirmgröße hinter dem Menü-Button (`#mobileMenu`, trotz des
+Klassennamens auch auf dem Desktop). Oben stehen nur Logo, WhatsApp-Button
+und der Menü-Button. Auf breiten Schirmen öffnet das Menü zweispaltig.
+Neue Bereiche dort **und** im Footer verlinken.
+
 ## Struktur
 
 ```

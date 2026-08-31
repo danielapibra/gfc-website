@@ -147,26 +147,20 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;width
 .brand img{height:30px;width:auto;}
 @media(min-width:1080px){.brand img{height:38px;}}
 
-.nav-desktop{display:none;}
-@media(min-width:960px){
-  .nav-desktop{display:flex;align-items:center;gap:1.9rem;}
-  .nav-desktop a{
-    position:relative;font-family:var(--font-label);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ash);
-    padding:.4em 0;transition:color .2s;
-  }
-  .nav-desktop a::after{content:'';position:absolute;left:0;right:100%;bottom:-2px;height:2px;background:linear-gradient(90deg,var(--gold),var(--purple));transition:right .3s var(--ease);}
-  .nav-desktop a:hover,.nav-desktop a.active{color:var(--bone);}
-  .nav-desktop a:hover::after,.nav-desktop a.active::after{right:0;}
-}
+/* Keine waagerechte Navigationsleiste mehr: neun Einträge nebeneinander
+   wirkten in der Kopfzeile überladen. Alle Bereiche liegen jetzt auf jeder
+   Bildschirmgröße hinter dem Menü-Button (#mobileMenu). */
 .nav-actions{display:flex;align-items:center;gap:.7rem;}
-.hamburger{display:flex;width:42px;height:42px;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:3px;}
+.hamburger{display:flex;width:42px;height:42px;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:3px;transition:border-color .2s,color .2s;}
+.hamburger:hover{border-color:var(--gold);color:var(--gold);}
 .hamburger svg{width:20px;height:20px;}
-@media(min-width:960px){.hamburger{display:none;}}
 .nav-actions .btn-gold{display:none;}
 @media(min-width:640px){.nav-actions .btn-gold{display:inline-flex;}}
 
 .mobile-menu{
-  position:fixed;inset:var(--nav-h) 0 0 0;z-index:99;background:rgba(9,9,11,.98);
+  /* voll deckend statt .98: sonst schimmert die Überschrift des Hero durch
+     und stört die Lesbarkeit -- das Menü ist die einzige Navigation */
+  position:fixed;inset:var(--nav-h) 0 0 0;z-index:99;background:var(--ink);
   transform:translateY(-8px);opacity:0;pointer-events:none;transition:opacity .28s var(--ease),transform .28s var(--ease);
   display:flex;flex-direction:column;padding:1.6rem 1.4rem;overflow-y:auto;
 }
@@ -176,8 +170,27 @@ body.menu-open .mobile-menu{opacity:1;transform:translateY(0);pointer-events:aut
   font-family:var(--font-label);font-size:1.15rem;text-transform:uppercase;letter-spacing:.03em;color:var(--bone);
 }
 .mobile-menu a span.rn{font-family:var(--font-label);font-size:.7rem;color:var(--gold);letter-spacing:.1em;}
+/* Beim Öffnen sieht man, in welchem Bereich man gerade ist */
+.mobile-menu a.active{color:var(--gold);}
 .mobile-menu .btn{margin-top:1.6rem;align-self:flex-start;}
-@media(min-width:960px){.mobile-menu{display:none;}}
+/* Auf großen Bildschirmen läuft dasselbe Menü über den Burger. Neun Einträge
+   nebeneinander in der Kopfzeile wirkten gedrängt, deshalb liegen sie hier
+   in einem mehrspaltigen Raster statt in einer langen Spalte. */
+@media(min-width:960px){
+  .mobile-menu{padding:3rem max(32px,calc((100vw - var(--max))/2 + 32px));}
+  .mobile-menu a{
+    display:flex;font-size:1.45rem;padding:1.1em .2em;
+    transition:color .2s var(--ease),padding-left .2s var(--ease);
+  }
+  .mobile-menu a:hover{color:var(--gold);padding-left:.8em;}
+  .mobile-menu a span.rn{font-size:.78rem;}
+  .mobile-menu .btn{margin-top:2.2rem;}
+}
+@media(min-width:960px) and (min-height:620px){
+  /* Zweispaltig, damit die Liste ohne Scrollen ins Bild passt */
+  .mobile-menu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 3.5rem;align-content:start;}
+  .mobile-menu .btn{grid-column:1 / -1;justify-self:start;}
+}
 
 /* ============ RING-APRON TICKER ============ */
 .ticker{

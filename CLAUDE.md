@@ -94,14 +94,22 @@ assets/
    geändert werden: als Text in `index.html` (`.schedule-row`) und als
    Zahlen in `getWindows()` in `script.js` — sonst zeigt die Live-Karte
    etwas anderes an als der Wochenplan.
-5. **Entrenamientos** (`#entrenamientos`) — vier Karten (Boxeo,
+5. **Clases grupales** (`#clases`, früher "Eventos") — fester Stundenplan
+   der geführten Klassen: Mo-Fr 6:00 Funcional, 7:00 Boxeo, 17:00 Boxeo,
+   18:00 Funcional, 19:00 Boxeo; Sa+So 8:00 Funcional, 9:00 Boxeo. Farbcode: Gold = Boxeo, Lila = Funcional.
+   Darunter der Block "Clases especiales y eventos" für Ankündigungen --
+   steht aktuell auf dem Leer-Hinweis (`.avisos-vacio`). Zum Ankündigen
+   eine `.event-card` einhängen und den Leer-Hinweis entfernen (Kommentar
+   steht über der Sektion in `index.html`). Erfundene Termine gibt es hier
+   bewusst nicht mehr.
+6. **Entrenamientos** (`#entrenamientos`) — vier Karten (Boxeo,
    Acondicionamiento, Competencia, Entrenamiento libre) unter dem Titel
    "Encuentra tu ritmo". Inhalt kommt aus einem Entwurf von Daniela.
-6. Planes (`#planes`) — Tabs (Membresías/Promos/Clases), **echte
+7. Planes (`#planes`) — Tabs (Membresías/Promos/Clases), **echte
    Preise** ($100.000 / $150.000 pro Monat, Stand siehe Git-Historie —
    bei Änderung durch Daniela hier direkt in `index.html` anpassen)
-7. Equipo (`#equipo`) — echtes Team (Camilo, Juan, Natalia, Salomé)
-8. Galería (`#galeria`) — 1 Video + 5 Fotos, darunter zwei vom Aufbau des
+8. Equipo (`#equipo`) — echtes Team (Camilo, Juan, Natalia, Salomé)
+9. Galería (`#galeria`) — 1 Video + 5 Fotos, darunter zwei vom Aufbau des
    Gyms. Bewusste Regeln von Daniela: **keine Fotos mit Kindern** und
    **keine Motive, die schon im Nosotros-Karussell laufen** (Sparring,
    Fassade, Presentación im Ring).
@@ -118,14 +126,6 @@ assets/
      Wischgeste durchblättern, Escape schließt. Die Video-Kachel öffnet
      einen echten Player mit Bedienleiste; beim Schließen wird der Inhalt
      geleert, sonst läuft der Ton unsichtbar weiter.
-9. **Clases grupales** (`#clases`, früher "Eventos") — fester Stundenplan
-   der geführten Klassen: Mo-Fr 6:00 Funcional, 7:00 Boxeo, 17:00 Boxeo,
-   18:00 Funcional, 19:00 Boxeo; Sa+So 8:00 Funcional, 9:00 Boxeo. Farbcode: Gold = Boxeo, Lila = Funcional.
-   Darunter der Block "Clases especiales y eventos" für Ankündigungen --
-   steht aktuell auf dem Leer-Hinweis (`.avisos-vacio`). Zum Ankündigen
-   eine `.event-card` einhängen und den Leer-Hinweis entfernen (Kommentar
-   steht über der Sektion in `index.html`). Erfundene Termine gibt es hier
-   bewusst nicht mehr.
 10. Reseñas (`#resenas`) — als Beispiel gekennzeichnet, Zitate sind erfunden
 11. Ubicación (`#ubicacion`) — echte Adresse, WhatsApp, Instagram,
     eingebettete Google-Maps-Karte (kein API-Key nötig, nur `?q=...&output=embed`)

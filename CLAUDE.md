@@ -119,8 +119,8 @@ assets/
      einen echten Player mit Bedienleiste; beim Schließen wird der Inhalt
      geleert, sonst läuft der Ton unsichtbar weiter.
 9. **Clases grupales** (`#clases`, früher "Eventos") — fester Stundenplan
-   der geführten Klassen: Mo-Fr 7:00, 17:00 und 19:00 Boxeo, 18:00
-   Funcional; Sa+So 9:00 Boxeo. Farbcode: Gold = Boxeo, Lila = Funcional.
+   der geführten Klassen: Mo-Fr 6:00 Funcional, 7:00 Boxeo, 17:00 Boxeo,
+   18:00 Funcional, 19:00 Boxeo; Sa+So 8:00 Funcional, 9:00 Boxeo. Farbcode: Gold = Boxeo, Lila = Funcional.
    Darunter der Block "Clases especiales y eventos" für Ankündigungen --
    steht aktuell auf dem Leer-Hinweis (`.avisos-vacio`). Zum Ankündigen
    eine `.event-card` einhängen und den Leer-Hinweis entfernen (Kommentar

@@ -101,21 +101,16 @@ function getStatus(){
   if(vacio && !quedaAlgo) vacio.hidden = false;
 })();
 
-// Ankündigungsleiste: einmal weggeklickt, bleibt sie für diesen Termin weg.
-// Steht kein Termin an, fehlt das Element und der Block macht nichts.
+// Ankündigungsleiste. Bewusst ohne Gedächtnis: Daniela will, dass sie bei
+// jedem Seitenaufruf wieder da ist, solange der Termin läuft. Das X blendet
+// sie nur für den Moment aus. Steht kein Termin an oder ist er vorbei, fehlt
+// das Element (siehe data-hasta oben) und der Block macht nichts.
 (function(){
   const barra = document.getElementById('avisoBarra');
   if(!barra) return;
-  const clave = 'gfc-aviso-' + barra.dataset.aviso;
-  let cerrado = false;
-  // localStorage wirft im privaten Modus mancher Browser
-  try{ cerrado = localStorage.getItem(clave) === 'cerrado'; }catch(e){}
-  if(!cerrado) barra.hidden = false;
+  barra.hidden = false;
   const boton = document.getElementById('avisoCerrar');
-  boton && boton.addEventListener('click', ()=>{
-    barra.hidden = true;
-    try{ localStorage.setItem(clave, 'cerrado'); }catch(e){}
-  });
+  boton && boton.addEventListener('click', ()=>{ barra.hidden = true; });
 })();
 
 // Mobiles Menü (Burger)

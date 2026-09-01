@@ -115,10 +115,11 @@ assets/
    Derselbe Termin steht zusätzlich in der goldenen Ankündigungsleiste
    unter der Kopfzeile (`.aviso-barra`, direkt hinter `</header>`): fest
    statt mitlaufend, weil ein Datum lesbar sein muss, ohne dass man auf
-   das Laufband wartet. Sie lässt sich wegklicken und bleibt dann weg --
-   gemerkt wird das pro `data-aviso`, also bei neuem Termin diesen Wert
-   ändern. Beim Entfernen des Termins beide Stellen zurückbauen
-   (Kommentare stehen jeweils darüber in `index.html`).
+   das Laufband wartet. Das X blendet sie nur bis zum nächsten Seitenaufruf
+   aus -- **bewusst ohne Gedächtnis**: erst merkte sie sich das Wegklicken
+   dauerhaft (localStorage), aber Daniela will, dass der Termin bei jedem
+   Besuch wieder auftaucht. Beim Entfernen des Termins beide Stellen
+   zurückbauen (Kommentare stehen jeweils darüber in `index.html`).
 7. Planes (`#planes`) — Tabs (Membresías/Promos/Clases), **echte
    Preise** ($100.000 / $150.000 pro Monat, Stand siehe Git-Historie —
    bei Änderung durch Daniela hier direkt in `index.html` anpassen)

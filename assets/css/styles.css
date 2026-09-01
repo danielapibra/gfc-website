@@ -394,7 +394,15 @@ body.menu-open .mobile-menu{opacity:1;transform:translateY(0);pointer-events:aut
 .schedule-row.is-today{border-left-color:var(--gold);background:var(--panel-2);}
 .schedule-row .day{font-family:var(--font-label);font-weight:600;letter-spacing:.05em;text-transform:uppercase;font-size:.92rem;display:flex;align-items:center;gap:.7em;}
 .schedule-row .day .tag{font-size:.62rem;background:var(--gold);color:#1a1305;padding:.15em .5em;border-radius:5px;letter-spacing:.05em;}
-.schedule-row .time{font-family:var(--font-display);font-size:1.15rem;color:var(--gold-2);}
+/* Mehrere Zeitfenster stehen untereinander statt in einer langen Zeile --
+   auf dem Handy brach "6:00 a.m.-10:00 a.m. · 3:00 p.m.-8:00 p.m." sonst
+   unschön um. Rechtsbündig, damit die Zeiten eine Kante bilden. */
+.schedule-row .time{
+  font-family:var(--font-display);font-size:1.15rem;color:var(--gold-2);
+  display:flex;flex-direction:column;align-items:flex-end;gap:.15rem;text-align:right;white-space:nowrap;
+}
+.schedule-row{align-items:flex-start;}
+.schedule-row .day{padding-top:.15rem;}
 .schedule-note{margin-top:1rem;font-size:.85rem;color:var(--ash-dim);}
 
 /* ============ ENTRENAMIENTOS ============ */

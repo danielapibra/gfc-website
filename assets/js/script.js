@@ -233,7 +233,10 @@ function mostrarFoto(i){
     lightboxMedia.replaceChildren();
     lightboxMedia.style.background = getComputedStyle(tile).background;
   }
-  lightboxCap.textContent = tile.getAttribute('data-caption');
+  // Dieselbe kurze Beschriftung wie auf der Kachel -- so gibt es nur einen
+  // Text pro Foto und in der Großansicht steht kein zweiter, längerer.
+  const etiqueta = tile.querySelector('span');
+  lightboxCap.textContent = etiqueta ? etiqueta.textContent.trim() : '';
   lightboxCount.textContent = (li + 1) + ' / ' + tiles.length;
 }
 

@@ -148,6 +148,8 @@ assets/
    - Fotos in `assets/img/galeria-1/-4/-6/-7/-8.webp` (die Nummern 2, 3
      und 5 hat Daniela aussortiert), Poster des Videos in
      `galeria-video-poster.webp`.
+   - Beschriftung steht nur einmal im `<span>` der Kachel; die Lightbox
+     zeigt denselben kurzen Text (frühere lange `data-caption` entfernt).
    - Klick öffnet die Lightbox — dort per Pfeilbutton, Pfeiltaste oder
      Wischgeste durchblättern, Escape schließt. Die Video-Kachel öffnet
      einen echten Player mit Bedienleiste; beim Schließen wird der Inhalt

@@ -191,6 +191,21 @@ assets/
 - Vor dem ersten Push in einer neuen Session einmal fragen, ob es losgehen
   darf. Danach eigenständig pushen.
 
+## Domain und Auffindbarkeit
+
+- Live unter **https://goldenfightclub.com** (auch `www.`), gekauft bei
+  Porkbun. DNS dort: vier A-Records auf die GitHub-Pages-IPs
+  (185.199.108-111.153) und `www` als CNAME auf `danielapibra.github.io`.
+  Im Repo steht die Datei `CNAME`; HTTPS ist erzwungen. Die alte Adresse
+  `danielapibra.github.io/gfc-website` leitet weiter.
+- `robots.txt`, `sitemap.xml`, Open-Graph-Tags (Vorschaubild
+  `assets/img/preview.jpg`, 1200x630) und JSON-LD als
+  `SportsActivityLocation` sind gesetzt. **Die Öffnungszeiten stehen damit
+  an einer vierten Stelle** -- im JSON-LD im `<head>`. Bei Änderungen also
+  vier Stellen gleichziehen.
+- Offen: Google Search Console (braucht Danielas Login), Link im
+  Google-Unternehmensprofil und in der Instagram-Bio, QR-Code fürs Gym.
+
 ## Offene Punkte
 
 - Logo als Vektor (SVG) statt PNG→WebP-Export

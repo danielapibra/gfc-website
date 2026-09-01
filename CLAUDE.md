@@ -100,7 +100,7 @@ assets/
    Feiertage geschlossen.** Stehen an zwei Stellen und müssen zusammen
    geändert werden: als Text in `index.html` (`.schedule-row`) und als
    Zahlen in `getWindows()` in `script.js` — **und ein drittes Mal** als
-   Fließtext in der Ubicación-Karte. Alle drei zusammen ändern, sonst
+   Liste `.loc-horario` in der Ubicación-Karte. Alle drei zusammen ändern, sonst
    widersprechen sich die Angaben (genau das war einmal wochenlang der
    Fall: Sa+So standen dort noch bis 23 Uhr).
 6. **Clases grupales** (`#clases`, früher "Eventos") — fester Stundenplan

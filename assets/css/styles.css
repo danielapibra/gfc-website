@@ -616,6 +616,13 @@ body.menu-open .mobile-menu{opacity:1;transform:translateY(0);pointer-events:aut
 .loc-row h4{font-family:var(--font-label);font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:var(--bone);margin-bottom:.25rem;}
 .loc-row p, .loc-row a{font-size:.92rem;color:var(--ash);}
 .loc-row a:hover{color:var(--gold);}
+/* Öffnungszeiten als kleine Tabelle: Tage links, Uhrzeiten rechts, mehrere
+   Zeitfenster untereinander. Als Fließtext brach das auf dem Handy mitten
+   in einer Uhrzeit um. */
+.loc-horario{display:grid;grid-template-columns:auto minmax(0,1fr);gap:.45rem 1.2rem;font-size:.9rem;margin-top:.15rem;}
+.loc-horario dt{font-family:var(--font-label);letter-spacing:.06em;text-transform:uppercase;font-size:.76rem;color:var(--ash-dim);padding-top:.15rem;white-space:nowrap;}
+.loc-horario dd{display:flex;flex-direction:column;gap:.2rem;color:var(--bone);}
+.loc-horario dd span{white-space:nowrap;}
 .loc-card .btn{align-self:flex-start;margin-top:.4rem;}
 .map-frame{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);min-height:320px;}
 .map-frame iframe{width:100%;height:100%;min-height:320px;border:0;filter:grayscale(.25) contrast(1.05);}

@@ -70,7 +70,7 @@ function getStatus(){
       pill.textContent = 'Cerrado'; pill.className = 'pill closed';
       headline.textContent = opensPhrase;
     }
-    sub.textContent = 'Hora de Colombia. Festivos: cerrado.';
+    sub.textContent = 'Festivos: cerrado.';
   }
   if(heroText){
     heroText.textContent = s.open ? ('Abierto ahora · cierra ' + s.closesAt) : ('Cerrado · ' + opensPhraseShort);

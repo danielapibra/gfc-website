@@ -31,10 +31,17 @@ function formatHour(h){
   let h12 = h%12; if(h12===0) h12=12;
   return h12+':00 '+suffix;
 }
+// Immer nach der Uhr in Duitama rechnen, nicht nach der des Geräts: sonst
+// zeigt die Seite jemandem in Spanien "abierto ahora", während das Gym
+// längst zu hat. Kolumbien liegt fest auf UTC-5 und kennt keine Sommerzeit,
+// deshalb reicht es, den Zeitstempel zu verschieben und die UTC-Werte zu
+// lesen -- das ergibt genau die Ortszeit in Duitama.
+function horaColombia(){
+  const d = new Date(Date.now() - 5*60*60*1000);
+  return { dia: d.getUTCDay(), horas: d.getUTCHours() + d.getUTCMinutes()/60 };
+}
 function getStatus(){
-  const now = new Date();
-  const day = now.getDay();
-  const hrs = now.getHours() + now.getMinutes()/60;
+  const { dia: day, horas: hrs } = horaColombia();
   const windows = getWindows(day);
   for(const [start,end] of windows){
     if(hrs>=start && hrs<end) return {open:true, day, closesAt: formatHour(end)};
@@ -63,7 +70,7 @@ function getStatus(){
       pill.textContent = 'Cerrado'; pill.className = 'pill closed';
       headline.textContent = opensPhrase;
     }
-    sub.textContent = 'Según la hora de tu dispositivo. Festivos: cerrado.';
+    sub.textContent = 'Hora de Colombia. Festivos: cerrado.';
   }
   if(heroText){
     heroText.textContent = s.open ? ('Abierto ahora · cierra ' + s.closesAt) : ('Cerrado · ' + opensPhraseShort);

@@ -84,7 +84,10 @@ assets/
 ### Bereiche auf der Seite (in dieser Reihenfolge)
 
 1. Hero mit Live-Rundenuhr (`#roundTimer`) und Live-Status-Badge
-   (offen/geschlossen, aus Gerätezeit berechnet, `script.js`)
+   (offen/geschlossen). Rechnet über `horaColombia()` in `script.js`
+   **immer nach der Uhr in Duitama**, nie nach der des Geräts -- sonst
+   sähe jemand im Ausland "abierto ahora", während das Gym zu hat.
+   Kolumbien liegt fest auf UTC-5 ohne Sommerzeit.
 2. Laufendes Ticker-Band + Valores-Marquee (dekorativ, `aria-hidden`)
 3. **Nosotros** (`#nosotros`) — Historia-Text + Karussell mit 3 Fotos
    und 1 Video als viertem Slide (`#historyTrack`). Reihenfolge: Fassade

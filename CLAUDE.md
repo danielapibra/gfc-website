@@ -31,7 +31,7 @@ aus Branch `main`.
   Browser (und GitHub Pages) noch tagelang die alte Version aus. Genau das
   hat einmal so ausgesehen, als sei ein Fix nicht angekommen.
 - Bilder vor dem Commit komprimieren, als `.webp` ablegen, Ziel < 300 KB.
-  Videos bleiben `.mp4`, möglichst < 3 MB.
+  Videos bleiben `.mp4`, möglichst < 3 MB (Werkzeug: siehe Arbeitsweise).
 - Keine Tokens, Passwörter oder privaten Mitgliederdaten im Repo.
 
 ## Marke
@@ -139,10 +139,13 @@ assets/
    Gyms. Bewusste Regeln von Daniela: **keine Fotos mit Kindern** und
    **keine Motive, die schon im Nosotros-Karussell laufen** (Sparring,
    Fassade, Presentación im Ring).
-   - Erste Kachel ist der Rundgang (`assets/video/espacios.mp4`,
+   - Drei Videos: Rundgang (`espacios.mp4`), Clase con El Guerrero
+     Ubarnes (`guerrero-ubarnes.mp4`, Profiboxer zu Gast) und Entreno
+     de las 5 (`entreno-5pm.mp4`). Erste Kachel ist der Rundgang
+     (`assets/video/espacios.mp4`,
      `.gallery-tile.feature` mit `data-video`), belegt einen 2x2-Block.
-     Dahinter zwei `.tall` (je 1x2), eine `.wide` (2x1) und zwei einfache:
-     4+2+2+2+1+1 = 12 Rasterfelder — geht bei 4, 3 und 2 Spalten glatt
+     dahinter vier einfache, eine `.wide` (2x1) und zwei einfache:
+     4+1+1+1+1+2+1+1 = 12 Rasterfelder — geht bei 4, 3 und 2 Spalten glatt
      auf. Wer Kacheln hinzufügt oder entfernt, muss diese Rechnung neu
      aufmachen, sonst entstehen Löcher im Raster.
    - Fotos in `assets/img/galeria-1/-4/-6/-7/-8.webp` (die Nummern 2, 3

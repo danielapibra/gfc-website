@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=27">
+<link rel="stylesheet" href="assets/css/styles.css?v=28">
 </head>
 <body>
 
@@ -499,10 +499,15 @@
       <h2 class="round-title"><span class="ghost" aria-hidden="true">GALERÍA</span><span class="fg">GALERÍA</span></h2>
       <p class="lede">Desde la obra hasta la primera campana: así se ve por dentro.</p>
     </div>
+    <!-- 2x2 (vídeo) + 4 sencillas + 2x1 (ancha) + 2 sencillas = 12 celdas:
+         encaja sin huecos en 4, 3 y 2 columnas. Al cambiar piezas hay que
+         rehacer esta cuenta. -->
     <div class="gallery-grid" data-reveal>
       <button class="gallery-tile feature" data-video="assets/video/espacios.mp4"><img src="assets/img/galeria-video-poster.webp" alt="Recorrido en vídeo por las instalaciones de Golden Fight Club" loading="lazy" width="787" height="1400"><svg class="play-badge" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="rgba(11,11,13,.55)" stroke="currentColor" stroke-width="1.4"/><path d="M10 8.4l6.2 3.6-6.2 3.6z" fill="currentColor" stroke="none"/></svg><span>Nuestros espacios</span></button>
-      <button class="gallery-tile tall"><img src="assets/img/galeria-1.webp" alt="Equipo de Golden Fight Club cargando tableros de madera durante la obra" loading="lazy" width="933" height="1400"><span>Levantando el gym</span></button>
-      <button class="gallery-tile tall"><img src="assets/img/galeria-4.webp" alt="Artista pintando con aerosol el mural del gimnasio" loading="lazy" width="1120" height="1400"><span>El mural</span></button>
+      <button class="gallery-tile"><img src="assets/img/galeria-1.webp" alt="Equipo de Golden Fight Club cargando tableros de madera durante la obra" loading="lazy" width="933" height="1400"><span>Levantando el gym</span></button>
+      <button class="gallery-tile"><img src="assets/img/galeria-4.webp" alt="Artista pintando con aerosol el mural del gimnasio" loading="lazy" width="1120" height="1400"><span>El mural</span></button>
+      <button class="gallery-tile" data-video="assets/video/guerrero-ubarnes.mp4"><img src="assets/img/galeria-video-guerrero.webp" alt="Vídeo de la clase especial con el boxeador profesional El Guerrero Ubarnes" loading="lazy" width="540" height="960"><svg class="play-badge" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="rgba(11,11,13,.55)" stroke="currentColor" stroke-width="1.4"/><path d="M10 8.4l6.2 3.6-6.2 3.6z" fill="currentColor" stroke="none"/></svg><span>Clase con El Guerrero Ubarnes</span></button>
+      <button class="gallery-tile" data-video="assets/video/entreno-5pm.mp4"><img src="assets/img/galeria-video-entreno.webp" alt="Vídeo de un entrenamiento de las cinco de la tarde" loading="lazy" width="540" height="960"><svg class="play-badge" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="rgba(11,11,13,.55)" stroke="currentColor" stroke-width="1.4"/><path d="M10 8.4l6.2 3.6-6.2 3.6z" fill="currentColor" stroke="none"/></svg><span>Entreno de las 5</span></button>
       <button class="gallery-tile wide"><img src="assets/img/galeria-7.webp" alt="Grupo haciendo plancha dentro del ring rodeado de público" loading="lazy" width="1400" height="933"><span>Todos adentro</span></button>
       <button class="gallery-tile"><img src="assets/img/galeria-6.webp" alt="Manos vendadas mientras se atan los guantes de boxeo" loading="lazy" width="933" height="1400"><span>Antes del round</span></button>
       <button class="gallery-tile"><img src="assets/img/galeria-8.webp" alt="Dos boxeadores intercambiando golpes en el ring" loading="lazy" width="933" height="1400"><span>Cara a cara</span></button>
@@ -648,6 +653,6 @@
 <a class="fab" href="https://wa.me/573138969300?text=%C2%A1Hola%21%20Vi%20la%20p%C3%A1gina%20web%20de%20Golden%20Fight%20Club%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20los%20entrenamientos%2C%20los%20horarios%20y%20los%20planes%20disponibles.%20%C2%A1Gracias%21" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.02 3C9.4 3 4 8.4 4 15.02c0 2.4.7 4.63 1.92 6.5L4 29l7.66-1.9a11.9 11.9 0 0 0 4.36.82h.01c6.62 0 12.02-5.4 12.02-12.02C28.05 8.4 22.65 3 16.02 3zm7.02 17.13c-.3.83-1.7 1.6-2.36 1.7-.6.1-1.36.14-2.2-.14a13.3 13.3 0 0 1-4.66-2.9 13.9 13.9 0 0 1-2.86-3.9c-.36-.7-.05-1.08.28-1.42.3-.3.66-.78 1-1.17.34-.4.44-.68.66-1.13.22-.45.1-.84-.06-1.18-.16-.33-1.47-3.55-2-4.86-.53-1.28-1.06-1.1-1.46-1.12-.38-.02-.8-.02-1.24-.02-.44 0-1.14.16-1.74.82-.6.66-2.28 2.22-2.28 5.42 0 3.2 2.33 6.3 2.66 6.73.33.44 4.58 6.98 11.1 9.8.96.4 1.5.4 2.1.33.7-.08 2.13-.87 2.44-1.7.3-.83.3-1.55.2-1.7-.08-.15-.3-.24-.6-.4z"/></svg></a>
 <button class="to-top" id="toTop" aria-label="Volver arriba"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6-6 6 6"/></svg></button>
 
-<script src="assets/js/script.js?v=27"></script>
+<script src="assets/js/script.js?v=28"></script>
 </body>
 </html>

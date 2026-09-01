@@ -117,7 +117,13 @@ assets/
 7. Planes (`#planes`) — Tabs (Membresías/Promos/Clases), **echte
    Preise** ($100.000 / $150.000 pro Monat, Stand siehe Git-Historie —
    bei Änderung durch Daniela hier direkt in `index.html` anpassen)
-8. Equipo (`#equipo`) — echtes Team (Camilo, Juan, Natalia, Salomé)
+8. Equipo (`#equipo`) — **auf Wunsch von Daniela ausgeblendet**. Der
+   fertige Abschnitt (echtes Team: Camilo, Juan, Natalia, Salomé) steckt
+   in `index.html` in einem `<template id="equipoOculto">` -- so bleibt er
+   erhalten, wird aber weder gerendert noch vorgelesen. Ein HTML-Kommentar
+   taugt dafür nicht: Bindestriche im Markup beenden ihn vorzeitig.
+   Zurückholen: template-Tag entfernen, Menü- und Footer-Eintrag wieder
+   einsetzen, Round-Nummern ab Galería um eins hochzählen.
 9. Galería (`#galeria`) — 1 Video + 5 Fotos, darunter zwei vom Aufbau des
    Gyms. Bewusste Regeln von Daniela: **keine Fotos mit Kindern** und
    **keine Motive, die schon im Nosotros-Karussell laufen** (Sparring,

@@ -52,10 +52,9 @@
   <a href="#horarios" data-nav><span class="rn">03</span> Horarios</a>
   <a href="#clases" data-nav><span class="rn">04</span> Clases</a>
   <a href="#planes" data-nav><span class="rn">05</span> Planes</a>
-  <a href="#equipo" data-nav><span class="rn">06</span> Equipo</a>
-  <a href="#galeria" data-nav><span class="rn">07</span> Galería</a>
-  <a href="#resenas" data-nav><span class="rn">08</span> Reseñas</a>
-  <a href="#ubicacion" data-nav><span class="rn">09</span> Ubicación</a>
+  <a href="#galeria" data-nav><span class="rn">06</span> Galería</a>
+  <a href="#resenas" data-nav><span class="rn">07</span> Reseñas</a>
+  <a href="#ubicacion" data-nav><span class="rn">08</span> Ubicación</a>
   <a class="btn btn-gold" href="https://wa.me/573138969300?text=%C2%A1Hola%21%20Vi%20la%20p%C3%A1gina%20web%20de%20Golden%20Fight%20Club%20y%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20entrenamientos%20y%20los%20planes%20disponibles.%20%C2%BFPodr%C3%ADan%20ayudarme%3F" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
 </nav>
 
@@ -429,7 +428,12 @@
   </div>
 </section>
 
-<!-- ============ ROUND 06 — EQUIPO ============ -->
+<!-- ============ ROUND 06 — EQUIPO (versteckt) ============ -->
+<!-- Daniela hat die Sektion vorerst ausgeblendet. Zum Zurückholen das
+     umschließende template-Tag entfernen, den Menü- und Footer-Eintrag
+     "Equipo" wieder einsetzen und die Round-Nummern ab Galería um eins
+     hochzählen (Galería 07, Reseñas 08, Ubicación 09). -->
+<template id="equipoOculto">
 <section class="section alt" id="equipo">
   <div class="wrap">
     <div class="section-head" data-reveal>
@@ -477,12 +481,13 @@
     </div>
   </div>
 </section>
+</template>
 
 <!-- ============ ROUND 07 — GALERÍA ============ -->
-<section class="section" id="galeria">
+<section class="section alt" id="galeria">
   <div class="wrap">
     <div class="section-head" data-reveal>
-      <span class="eyebrow">Round 07</span>
+      <span class="eyebrow">Round 06</span>
       <h2 class="round-title"><span class="ghost" aria-hidden="true">GALERÍA</span><span class="fg">GALERÍA</span></h2>
       <p class="lede">Desde la obra hasta la primera campana: así se ve por dentro.</p>
     </div>
@@ -513,10 +518,10 @@
 </div>
 
 <!-- ============ ROUND 08 — RESEÑAS ============ -->
-<section class="section alt" id="resenas">
+<section class="section" id="resenas">
   <div class="wrap">
     <div class="section-head" data-reveal>
-      <span class="eyebrow">Round 08</span>
+      <span class="eyebrow">Round 07</span>
       <h2 class="round-title"><span class="ghost" aria-hidden="true">RESEÑAS</span><span class="fg">RESEÑAS</span></h2>
       <p class="lede">Lo que dicen quienes ya entrenan con nosotros — sin filtros, directo en Google.</p>
     </div>
@@ -533,10 +538,10 @@
 </section>
 
 <!-- ============ ROUND 09 — UBICACIÓN ============ -->
-<section class="section" id="ubicacion">
+<section class="section alt" id="ubicacion">
   <div class="wrap">
     <div class="section-head" data-reveal>
-      <span class="eyebrow">Round 09</span>
+      <span class="eyebrow">Round 08</span>
       <h2 class="round-title"><span class="ghost" aria-hidden="true">UBICACIÓN</span><span class="fg">UBICACIÓN</span></h2>
       <p class="lede">Visítanos en Duitama, Boyacá. Escríbenos si tienes dudas para llegar.</p>
     </div>
@@ -604,7 +609,6 @@
       <div class="footer-col">
         <h5>Más</h5>
         <a href="#planes">Planes</a>
-        <a href="#equipo">Equipo</a>
         <a href="#galeria">Galería</a>
         <a href="#ubicacion">Ubicación</a>
       </div>

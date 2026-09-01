@@ -87,7 +87,8 @@ assets/
    (offen/geschlossen, aus Gerätezeit berechnet, `script.js`)
 2. Laufendes Ticker-Band + Valores-Marquee (dekorativ, `aria-hidden`)
 3. **Nosotros** (`#nosotros`) — Historia-Text + Karussell mit 3 Fotos
-   und 1 Video als viertem Slide (`#historyTrack`)
+   und 1 Video als viertem Slide (`#historyTrack`). Reihenfolge: Fassade
+   ("Nuestra casa"), Sparring, Comunidad, Video.
 4. **Entrenamientos** (`#entrenamientos`) — vier Karten (Boxeo,
    Acondicionamiento, Competencia, Entrenamiento libre) unter dem Titel
    "Encuentra tu ritmo". Inhalt kommt aus einem Entwurf von Daniela.

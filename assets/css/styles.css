@@ -589,6 +589,8 @@ body.menu-open .mobile-menu{opacity:1;transform:translateY(0);pointer-events:aut
 .testi-arrow{width:42px;height:42px;border:1px solid var(--line-strong);border-radius:3px;display:flex;align-items:center;justify-content:center;transition:border-color .2s,color .2s;}
 .testi-arrow:hover{border-color:var(--gold);color:var(--gold);}
 .testi-arrow svg{width:16px;height:16px;}
+/* Links auf das echte Google-Profil unter dem Zitat-Karussell */
+.resenas-google{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center;margin-top:1.8rem;}
 .testi-dots{display:flex;gap:.5rem;}
 .testi-dot{width:8px;height:8px;border-radius:50%;background:var(--line-strong);transition:background .25s,transform .25s;}
 .testi-dot.is-active{background:var(--gold);transform:scale(1.3);}

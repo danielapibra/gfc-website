@@ -88,13 +88,16 @@ assets/
 2. Laufendes Ticker-Band + Valores-Marquee (dekorativ, `aria-hidden`)
 3. **Nosotros** (`#nosotros`) — Historia-Text + Karussell mit 3 Fotos
    und 1 Video als viertem Slide (`#historyTrack`)
-4. Horarios (`#horarios`) — Live-Status-Karte + Wochenplan.
+4. **Entrenamientos** (`#entrenamientos`) — vier Karten (Boxeo,
+   Acondicionamiento, Competencia, Entrenamiento libre) unter dem Titel
+   "Encuentra tu ritmo". Inhalt kommt aus einem Entwurf von Daniela.
+5. Horarios (`#horarios`) — Live-Status-Karte + Wochenplan.
    **Echte Zeiten: Mo–Fr 6–10 Uhr und 15–20 Uhr, Sa+So 8–11 Uhr,
    Feiertage geschlossen.** Stehen an zwei Stellen und müssen zusammen
    geändert werden: als Text in `index.html` (`.schedule-row`) und als
    Zahlen in `getWindows()` in `script.js` — sonst zeigt die Live-Karte
    etwas anderes an als der Wochenplan.
-5. **Clases grupales** (`#clases`, früher "Eventos") — fester Stundenplan
+6. **Clases grupales** (`#clases`, früher "Eventos") — fester Stundenplan
    der geführten Klassen: Mo-Fr 6:00 Funcional, 7:00 Boxeo, 17:00 Boxeo,
    18:00 Funcional, 19:00 Boxeo; Sa+So 8:00 Funcional, 9:00 Boxeo. Farbcode: Gold = Boxeo, Lila = Funcional.
    Darunter der Block "Clases especiales y eventos" für Ankündigungen --
@@ -102,9 +105,6 @@ assets/
    eine `.event-card` einhängen und den Leer-Hinweis entfernen (Kommentar
    steht über der Sektion in `index.html`). Erfundene Termine gibt es hier
    bewusst nicht mehr.
-6. **Entrenamientos** (`#entrenamientos`) — vier Karten (Boxeo,
-   Acondicionamiento, Competencia, Entrenamiento libre) unter dem Titel
-   "Encuentra tu ritmo". Inhalt kommt aus einem Entwurf von Daniela.
 7. Planes (`#planes`) — Tabs (Membresías/Promos/Clases), **echte
    Preise** ($100.000 / $150.000 pro Monat, Stand siehe Git-Historie —
    bei Änderung durch Daniela hier direkt in `index.html` anpassen)

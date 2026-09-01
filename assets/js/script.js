@@ -22,9 +22,10 @@ document.getElementById('roundTime') && (function(){
   setInterval(tick, 1000);
 })();
 
-// Live-Status Geöffnet/Geschlossen — Lun–Vie: 2 Franjas · Sáb–Dom: 8-11 Uhr · Festivos: cerrado (keine automatische Feiertagserkennung)
+// Live-Status Geöffnet/Geschlossen — Lun–Vie 6-11 und 14-20 Uhr ·
+// Sáb–Dom 8-11 Uhr · Festivos: cerrado (keine automatische Feiertagserkennung)
 function getWindows(day){
-  return (day>=1 && day<=5) ? [[6,10],[15,20]] : [[8,11]];
+  return (day>=1 && day<=5) ? [[6,11],[14,20]] : [[8,11]];
 }
 function formatHour(h){
   const suffix = h>=12 ? 'p.m.' : 'a.m.';

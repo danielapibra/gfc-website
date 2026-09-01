@@ -96,7 +96,7 @@ assets/
    Acondicionamiento, Competencia, Entrenamiento libre) unter dem Titel
    "Encuentra tu ritmo". Inhalt kommt aus einem Entwurf von Daniela.
 5. Horarios (`#horarios`) — Live-Status-Karte + Wochenplan.
-   **Echte Zeiten: Mo–Fr 6–10 Uhr und 15–20 Uhr, Sa+So 8–11 Uhr,
+   **Echte Zeiten: Mo–Fr 6–11 Uhr und 14–20 Uhr, Sa+So 8–11 Uhr,
    Feiertage geschlossen.** Stehen an zwei Stellen und müssen zusammen
    geändert werden: als Text in `index.html` (`.schedule-row`) und als
    Zahlen in `getWindows()` in `script.js` — **und ein drittes Mal** als

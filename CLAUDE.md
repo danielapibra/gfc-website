@@ -135,7 +135,14 @@ assets/
      Wischgeste durchblättern, Escape schließt. Die Video-Kachel öffnet
      einen echten Player mit Bedienleiste; beim Schließen wird der Inhalt
      geleert, sonst läuft der Ton unsichtbar weiter.
-10. Reseñas (`#resenas`) — als Beispiel gekennzeichnet, Zitate sind erfunden
+10. Reseñas (`#resenas`) — **keine Zitate auf der Seite**. Es gibt erst
+    zwei echte Google-Bewertungen; erfundene Beispiele wirkten unglaub-
+    würdig. Stattdessen zwei Buttons auf Danielas Google-Profil
+    (`https://share.google/4BZ4WOa6u5VgfICZA`): ansehen und selbst
+    schreiben. Google-Bewertungen automatisch einzubinden geht hier
+    nicht -- die Places API bräuchte einen Schlüssel, der im offenen
+    Repo läge, kostet Geld und liefert nur 5 Bewertungen. Kommen genug
+    echte zusammen: Zitat-Karussell aus Commit ff39d61 zurückholen.
 11. Ubicación (`#ubicacion`) — echte Adresse, WhatsApp, Instagram,
     eingebettete Google-Maps-Karte (kein API-Key nötig, nur `?q=...&output=embed`)
 
@@ -164,7 +171,6 @@ assets/
 
 ## Offene Punkte
 
-- Reseñas: echte Kundenstimmen statt Beispiel-Zitate
 - Logo als Vektor (SVG) statt PNG→WebP-Export
 - Eigene Domain verbinden
 - Kontaktformular (GitHub Pages kann das nicht selbst)

@@ -251,35 +251,9 @@ lightbox.addEventListener('touchend', (e)=>{
   xIni = null;
 }, {passive:true});
 
-// Reseñas-Karussell
-const testiTrack = document.getElementById('testiTrack');
-const testiSlides = testiTrack.children;
-const testiDotsWrap = document.getElementById('testiDots');
-let ti = 0, testiAutoplay;
-for(let i=0;i<testiSlides.length;i++){
-  const d = document.createElement('button');
-  d.className = 'testi-dot' + (i===0 ? ' is-active' : '');
-  d.setAttribute('aria-label', 'Ir a la reseña '+(i+1));
-  d.addEventListener('click', ()=>goToTesti(i));
-  testiDotsWrap.appendChild(d);
-}
-function goToTesti(i){
-  ti = (i + testiSlides.length) % testiSlides.length;
-  testiTrack.style.transform = 'translateX(-'+(ti*100)+'%)';
-  [...testiDotsWrap.children].forEach((d,idx)=>d.classList.toggle('is-active', idx===ti));
-}
-document.getElementById('testiPrev').addEventListener('click', ()=>goToTesti(ti-1));
-document.getElementById('testiNext').addEventListener('click', ()=>goToTesti(ti+1));
-function startTestiAutoplay(){
-  if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  testiAutoplay = setInterval(()=>goToTesti(ti+1), 6000);
-}
-function stopTestiAutoplay(){ clearInterval(testiAutoplay); }
-startTestiAutoplay();
-document.querySelector('.testi-wrap').addEventListener('mouseenter', stopTestiAutoplay);
-document.querySelector('.testi-wrap').addEventListener('mouseleave', startTestiAutoplay);
-document.querySelector('.testi-wrap').addEventListener('focusin', stopTestiAutoplay);
-document.querySelector('.testi-wrap').addEventListener('focusout', startTestiAutoplay);
+// Das Reseñas-Karussell ist raus: die Sektion verweist jetzt direkt auf
+// Google, weil es erst zwei echte Bewertungen gibt. Der Code dazu steht in
+// der Git-Historie (bis Commit ff39d61), falls er zurückkommen soll.
 
 // Nosotros-Karussell: 3 Fotos + 1 Video. Die Fotos wechseln alle 5s, der
 // Video-Slide bleibt stehen, bis das Video einmal komplett gelaufen ist.

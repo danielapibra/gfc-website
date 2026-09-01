@@ -82,6 +82,25 @@ function getStatus(){
   });
 })();
 
+// Abgelaufene Termine verschwinden von selbst. Das Datum steht als
+// data-hasta am Element, immer mit fester Zeitzone Kolumbien (-05:00) --
+// ohne die würde jeder Browser die Uhrzeit als seine eigene Ortszeit lesen
+// und der Aushang bliebe im Ausland Stunden zu lang oder zu kurz stehen.
+// Auf der Seite selbst steht die Zeitzone bewusst nirgends.
+(function(){
+  const ahora = Date.now();
+  let quedaAlgo = false;
+  document.querySelectorAll('[data-hasta]').forEach(el=>{
+    const hasta = Date.parse(el.dataset.hasta);
+    if(isNaN(hasta)) return;              // unlesbares Datum: lieber stehen lassen
+    if(ahora > hasta) el.remove();
+    else if(el.classList.contains('event-card')) quedaAlgo = true;
+  });
+  // Ist kein Termin mehr übrig, tritt der Leer-Hinweis an seine Stelle
+  const vacio = document.querySelector('[data-vacio]');
+  if(vacio && !quedaAlgo) vacio.hidden = false;
+})();
+
 // Ankündigungsleiste: einmal weggeklickt, bleibt sie für diesen Termin weg.
 // Steht kein Termin an, fehlt das Element und der Block macht nichts.
 (function(){

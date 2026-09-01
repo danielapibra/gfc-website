@@ -105,7 +105,12 @@ assets/
    Zum Ankündigen eine `.event-card` einhängen (Kommentar steht über der
    Sektion in `index.html`); steht nichts an, kommt der Leer-Hinweis
    `.avisos-vacio` zurück. Erfundene Termine gibt es hier bewusst nicht.
-   **Vergangene Termine nach dem Datum wieder entfernen** -- aktuell steht
+   **Termine verfallen von selbst**: `data-hasta` am Element, immer mit
+   fester Zeitzone Kolumbien (`-05:00`) -- ohne die liest jeder Browser
+   die Uhrzeit als seine eigene Ortszeit. Ist der Zeitpunkt vorbei,
+   entfernt `script.js` Karte und Ankündigungsleiste und blendet den
+   Leer-Hinweis (`[data-vacio]`) ein. Aufräumen ist trotzdem sinnvoll,
+   aber nicht mehr dringend. Aktuell steht
    dort die Jornada de sparring vom Freitag, 4.9.2026, 16:30 Uhr ($5.000).
    Derselbe Termin steht zusätzlich in der goldenen Ankündigungsleiste
    unter der Kopfzeile (`.aviso-barra`, direkt hinter `</header>`): fest

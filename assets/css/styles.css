@@ -203,11 +203,38 @@ body.menu-open .mobile-menu{opacity:1;transform:translateY(0);pointer-events:aut
   font-family:var(--font-label);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.82rem;
   color:var(--gold-2);padding:0 1.6rem;white-space:nowrap;display:flex;align-items:center;gap:1.6rem;
 }
-/* Termin-Chip im Laufband: umgekehrte Farben, damit er zwischen den
-   Markenwörtern heraussticht. Das ganze Band ist dann anklickbar. */
-.ticker-track span.aviso{background:var(--gold);color:#171105;padding:.35em 1.1em;margin:0 1.2rem;clip-path:var(--notch);letter-spacing:.1em;}
-.ticker--aviso{display:block;cursor:pointer;}
-.ticker--aviso:hover .aviso{background:var(--gold-2);}
+/* ============ ANKÜNDIGUNGSLEISTE ============ */
+/* Steht fest unter der Kopfzeile, statt im laufenden Band mitzuwandern --
+   ein Termin mit Datum muss lesbar sein, ohne dass man auf ihn wartet. */
+.aviso-barra{
+  position:fixed;top:var(--nav-h);left:0;right:0;z-index:98;
+  background:var(--gold);color:#171105;
+  display:flex;align-items:center;justify-content:center;gap:.5rem 1.4rem;flex-wrap:wrap;
+  padding:.7rem 3.2rem .7rem 1.2rem;
+  font-family:var(--font-label);font-size:.82rem;letter-spacing:.04em;
+  box-shadow:0 6px 18px rgba(0,0,0,.45);
+}
+.aviso-barra[hidden]{display:none;}
+.aviso-barra-texto{display:flex;align-items:center;gap:.5rem 1rem;flex-wrap:wrap;justify-content:center;color:inherit;}
+.aviso-barra-texto strong{font-weight:700;text-transform:uppercase;letter-spacing:.08em;}
+.aviso-barra-texto span{color:#3a2d10;}
+.aviso-barra-texto:hover{text-decoration:underline;}
+.aviso-barra-cta{
+  background:#0b0b0d;color:var(--gold-2);text-transform:uppercase;font-weight:600;
+  font-size:.74rem;letter-spacing:.12em;padding:.6em 1.1em;clip-path:var(--notch);flex:none;
+  transition:color .2s;
+}
+.aviso-barra-cta:hover{color:var(--bone);}
+.aviso-barra-cerrar{
+  position:absolute;right:.5rem;top:50%;transform:translateY(-50%);
+  width:32px;height:32px;display:flex;align-items:center;justify-content:center;color:#171105;opacity:.65;
+}
+.aviso-barra-cerrar:hover{opacity:1;}
+.aviso-barra-cerrar svg{width:15px;height:15px;}
+@media(max-width:640px){
+  .aviso-barra{font-size:.76rem;padding:.6rem 2.6rem .6rem 1rem;}
+  .aviso-barra-texto{gap:.15rem .8rem;}
+}
 .ticker-track span::after{content:'✦';color:var(--purple);}
 @keyframes tick{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 

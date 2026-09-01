@@ -106,9 +106,13 @@ assets/
    `.avisos-vacio` zurück. Erfundene Termine gibt es hier bewusst nicht.
    **Vergangene Termine nach dem Datum wieder entfernen** -- aktuell steht
    dort die Jornada de sparring vom Freitag, 4.9.2026, 16:30 Uhr ($5.000).
-   Derselbe Termin läuft als goldener Chip im Ticker-Band unter dem Hero
-   (`.ticker--aviso`); beim Entfernen beide Stellen zurückbauen, Anleitung
-   steht als Kommentar über dem Band in `index.html`.
+   Derselbe Termin steht zusätzlich in der goldenen Ankündigungsleiste
+   unter der Kopfzeile (`.aviso-barra`, direkt hinter `</header>`): fest
+   statt mitlaufend, weil ein Datum lesbar sein muss, ohne dass man auf
+   das Laufband wartet. Sie lässt sich wegklicken und bleibt dann weg --
+   gemerkt wird das pro `data-aviso`, also bei neuem Termin diesen Wert
+   ändern. Beim Entfernen des Termins beide Stellen zurückbauen
+   (Kommentare stehen jeweils darüber in `index.html`).
 7. Planes (`#planes`) — Tabs (Membresías/Promos/Clases), **echte
    Preise** ($100.000 / $150.000 pro Monat, Stand siehe Git-Historie —
    bei Änderung durch Daniela hier direkt in `index.html` anpassen)

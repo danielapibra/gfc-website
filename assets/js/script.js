@@ -82,6 +82,23 @@ function getStatus(){
   });
 })();
 
+// Ankündigungsleiste: einmal weggeklickt, bleibt sie für diesen Termin weg.
+// Steht kein Termin an, fehlt das Element und der Block macht nichts.
+(function(){
+  const barra = document.getElementById('avisoBarra');
+  if(!barra) return;
+  const clave = 'gfc-aviso-' + barra.dataset.aviso;
+  let cerrado = false;
+  // localStorage wirft im privaten Modus mancher Browser
+  try{ cerrado = localStorage.getItem(clave) === 'cerrado'; }catch(e){}
+  if(!cerrado) barra.hidden = false;
+  const boton = document.getElementById('avisoCerrar');
+  boton && boton.addEventListener('click', ()=>{
+    barra.hidden = true;
+    try{ localStorage.setItem(clave, 'cerrado'); }catch(e){}
+  });
+})();
+
 // Mobiles Menü (Burger)
 const menuToggle = document.getElementById('menuToggle');
 const menuIcon = document.getElementById('menuIcon');

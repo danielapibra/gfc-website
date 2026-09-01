@@ -101,10 +101,11 @@ assets/
    der geführten Klassen: Mo-Fr 6:00 Funcional, 7:00 Boxeo, 17:00 Boxeo,
    18:00 Funcional, 19:00 Boxeo; Sa+So 8:00 Funcional, 9:00 Boxeo. Farbcode: Gold = Boxeo, Lila = Funcional.
    Darunter der Block "Clases especiales y eventos" für Ankündigungen --
-   steht aktuell auf dem Leer-Hinweis (`.avisos-vacio`). Zum Ankündigen
-   eine `.event-card` einhängen und den Leer-Hinweis entfernen (Kommentar
-   steht über der Sektion in `index.html`). Erfundene Termine gibt es hier
-   bewusst nicht mehr.
+   Zum Ankündigen eine `.event-card` einhängen (Kommentar steht über der
+   Sektion in `index.html`); steht nichts an, kommt der Leer-Hinweis
+   `.avisos-vacio` zurück. Erfundene Termine gibt es hier bewusst nicht.
+   **Vergangene Termine nach dem Datum wieder entfernen** -- aktuell steht
+   dort die Clase especial vom Freitag, 4.9.2026, 16:30 Uhr.
 7. Planes (`#planes`) — Tabs (Membresías/Promos/Clases), **echte
    Preise** ($100.000 / $150.000 pro Monat, Stand siehe Git-Historie —
    bei Änderung durch Daniela hier direkt in `index.html` anpassen)

@@ -105,7 +105,7 @@ assets/
    Sektion in `index.html`); steht nichts an, kommt der Leer-Hinweis
    `.avisos-vacio` zurück. Erfundene Termine gibt es hier bewusst nicht.
    **Vergangene Termine nach dem Datum wieder entfernen** -- aktuell steht
-   dort die Clase especial vom Freitag, 4.9.2026, 16:30 Uhr.
+   dort die Jornada de sparring vom Freitag, 4.9.2026, 16:30 Uhr ($5.000).
 7. Planes (`#planes`) — Tabs (Membresías/Promos/Clases), **echte
    Preise** ($100.000 / $150.000 pro Monat, Stand siehe Git-Historie —
    bei Änderung durch Daniela hier direkt in `index.html` anpassen)

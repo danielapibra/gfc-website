@@ -96,8 +96,10 @@ assets/
    **Echte Zeiten: Mo–Fr 6–10 Uhr und 15–20 Uhr, Sa+So 8–11 Uhr,
    Feiertage geschlossen.** Stehen an zwei Stellen und müssen zusammen
    geändert werden: als Text in `index.html` (`.schedule-row`) und als
-   Zahlen in `getWindows()` in `script.js` — sonst zeigt die Live-Karte
-   etwas anderes an als der Wochenplan.
+   Zahlen in `getWindows()` in `script.js` — **und ein drittes Mal** als
+   Fließtext in der Ubicación-Karte. Alle drei zusammen ändern, sonst
+   widersprechen sich die Angaben (genau das war einmal wochenlang der
+   Fall: Sa+So standen dort noch bis 23 Uhr).
 6. **Clases grupales** (`#clases`, früher "Eventos") — fester Stundenplan
    der geführten Klassen: Mo-Fr 6:00 Funcional, 7:00 Boxeo, 17:00 Boxeo,
    18:00 Funcional, 19:00 Boxeo; Sa+So 8:00 Funcional, 9:00 Boxeo. Farbcode: Gold = Boxeo, Lila = Funcional.

@@ -575,6 +575,9 @@ body.menu-open .mobile-menu{opacity:1;transform:translateY(0);pointer-events:aut
 .events-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:1.4rem;}
 @media(min-width:760px){.events-grid{grid-template-columns:repeat(3,minmax(0,1fr));}}
 .event-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:1.7rem;display:flex;flex-direction:column;gap:.9rem;transition:transform .2s var(--ease),border-color .2s,box-shadow .2s;}
+/* Muss sein: das display:flex oben schlägt sonst das hidden-Attribut, und
+   der Leer-Hinweis stünde neben dem noch gültigen Termin. */
+.event-card[hidden]{display:none;}
 .event-card:hover{transform:translate(-3px,-5px);border-color:var(--gold-deep);box-shadow:6px 8px 0 rgba(0,0,0,.5);}
 .event-date{display:flex;align-items:center;gap:.9rem;}
 .event-date .box{width:56px;height:56px;border-radius:0;clip-path:var(--notch);background:var(--gold);color:#171105;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--font-label);line-height:1;flex:none;}

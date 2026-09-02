@@ -598,7 +598,7 @@ body.menu-open .mobile-menu{opacity:1;transform:translateY(0);pointer-events:aut
   content:'';position:absolute;inset:0;z-index:-1;
   background:
     linear-gradient(90deg, rgba(11,11,13,.96) 0%, rgba(11,11,13,.78) 42%, rgba(11,11,13,.30) 100%),
-    url(../img/galeria-8.webp) center 62% / cover no-repeat;
+    url(../img/galeria-8.webp) center 43% / cover no-repeat;
 }
 .evento-badge{
   align-self:flex-start;font-family:var(--font-label);font-size:.7rem;font-weight:600;

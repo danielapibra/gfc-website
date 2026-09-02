@@ -1,0 +1,14 @@
+<!doctype html><meta charset="utf-8">
+<iframe id="f" src="/index.html" style="width:1200px;height:600px;border:0"></iframe><pre id="o">…</pre>
+<script>
+document.getElementById('f').addEventListener('load',()=>{setTimeout(()=>{
+ const d=document.getElementById('f').contentDocument,w=d.defaultView;
+ const c=d.querySelector('.evento-destacado');
+ const h=c.querySelector('h3');
+ const cs=w.getComputedStyle(c), hs=w.getComputedStyle(h), bs=w.getComputedStyle(c,'::before');
+ document.getElementById('o').textContent =
+  'ancho tarjeta: '+Math.round(c.getBoundingClientRect().width)+
+  '\ntitular: '+hs.fontSize+' / '+hs.fontFamily.split(',')[0]+
+  '\nfondo ::before: '+bs.backgroundImage.slice(0,90);
+},600)});
+</script>

@@ -106,6 +106,9 @@ assets/
 6. **Clases grupales** (`#clases`, früher "Eventos") — fester Stundenplan
    der geführten Klassen: Mo-Fr 6:00 Funcional, 7:00 Boxeo, 17:00 Boxeo,
    18:00 Funcional, 19:00 Boxeo; Sa+So 8:00 Funcional, 9:00 Boxeo. Farbcode: Gold = Boxeo, Lila = Funcional.
+   Unter dem Stundenplan zwei Hinweise: außerhalb der Zeiten ist freies
+   Training möglich, und **Einzelstunden haben keine feste Zeit** --
+   sie werden direkt mit dem Trainer abgesprochen (Link auf WhatsApp).
    Darunter der Block "Clases especiales y eventos" für Ankündigungen --
    Zum Ankündigen eine `.event-card` einhängen (Kommentar steht über der
    Sektion in `index.html`); steht nichts an, kommt der Leer-Hinweis

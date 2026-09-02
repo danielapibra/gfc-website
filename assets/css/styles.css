@@ -560,6 +560,9 @@ body.menu-open .mobile-menu{opacity:1;transform:translateY(0);pointer-events:aut
 .clase.boxeo{background:rgba(205,164,92,.14);border:1px solid var(--gold-deep);color:var(--gold-2);}
 .clase.funcional{background:rgba(109,40,217,.18);border:1px solid var(--purple);color:var(--purple-text);}
 .clases-nota{margin-top:1rem;color:var(--ash-dim);font-size:.88rem;}
+.clases-nota + .clases-nota{margin-top:.5rem;}
+.clases-nota a{color:var(--gold-2);text-decoration:underline;text-underline-offset:3px;}
+.clases-nota a:hover{color:var(--gold);}
 .avisos{margin-top:2.6rem;}
 .avisos-titulo{font-family:var(--font-label);font-size:.84rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
 /* Solange nichts ansteht, füllt der Hinweis die ganze Breite -- als schmale

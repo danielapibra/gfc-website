@@ -97,16 +97,17 @@ function getStatus(){
 // Auf der Seite selbst steht die Zeitzone bewusst nirgends.
 (function(){
   const ahora = Date.now();
-  let quedaAlgo = false;
   document.querySelectorAll('[data-hasta]').forEach(el=>{
     const hasta = Date.parse(el.dataset.hasta);
     if(isNaN(hasta)) return;              // unlesbares Datum: lieber stehen lassen
     if(ahora > hasta) el.remove();
-    else if(el.classList.contains('event-card')) quedaAlgo = true;
   });
-  // Ist kein Termin mehr übrig, tritt der Leer-Hinweis an seine Stelle
+  // Ist kein Termin mehr übrig, tritt der Leer-Hinweis an seine Stelle.
+  // Gezählt wird, was nach dem Aufräumen wirklich noch dasteht -- auch
+  // Ankündigungen ohne Datum (z.B. "próximamente"), die kein data-hasta haben.
   const vacio = document.querySelector('[data-vacio]');
-  if(vacio && !quedaAlgo) vacio.hidden = false;
+  const quedan = document.querySelectorAll('.event-card:not([data-vacio])').length;
+  if(vacio && quedan === 0) vacio.hidden = false;
 })();
 
 // Ankündigungsleiste. Bewusst ohne Gedächtnis: Daniela will, dass sie bei

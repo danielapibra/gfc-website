@@ -112,7 +112,9 @@ assets/
    Darunter der Block "Clases especiales y eventos" für Ankündigungen --
    Zum Ankündigen eine `.event-card` einhängen (Kommentar steht über der
    Sektion in `index.html`); steht nichts an, kommt der Leer-Hinweis
-   `.avisos-vacio` zurück. Erfundene Termine gibt es hier bewusst nicht.
+   `.avisos-vacio` zurück. Termine **ohne Datum** bekommen kein
+   `data-hasta` und eine hohle Datumsbox (`.box.proximo`, "? Próx.") --
+   aktuell die Pelea entre empresarios, deren Datum noch offen ist. Erfundene Termine gibt es hier bewusst nicht.
    **Termine verfallen von selbst**: `data-hasta` am Element, immer mit
    fester Zeitzone Kolumbien (`-05:00`) -- ohne die liest jeder Browser
    die Uhrzeit als seine eigene Ortszeit. Ist der Zeitpunkt vorbei,

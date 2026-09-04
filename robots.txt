@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /editor.html
 
 Sitemap: https://goldenfightclub.com/sitemap.xml

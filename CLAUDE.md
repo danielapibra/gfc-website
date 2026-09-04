@@ -211,6 +211,27 @@ assets/
 - Offen: Google Search Console (braucht Danielas Login), Link im
   Google-Unternehmensprofil und in der Instagram-Bio, QR-Code fürs Gym.
 
+## Editor für Daniela und ihre Schwester
+
+`editor.html` (nicht von der Seite verlinkt, `noindex`, in `robots.txt`
+ausgeschlossen). Läuft ohne Server: liest `index.html` über die GitHub-API,
+lässt Texte, Fotos und Termine bearbeiten und schreibt die Datei zurück.
+
+- Anmeldung mit einem fine-grained Token (nur dieses Repo, Contents:
+  read/write). Liegt im localStorage des jeweiligen Browsers, nirgends im
+  Repo. Läuft ab -- dann neu erstellen.
+- Welche Felder editierbar sind, steht in der Liste `EDITABLES` im Editor
+  (CSS-Selektoren). Neue Bereiche dort ergänzen.
+- **Wichtig:** Bearbeitet wird immer nur der längste freie Textknoten eines
+  Elements, nie `textContent` des ganzen Elements -- sonst verschwänden das
+  `<small>/mes</small>` der Preise, die SVG-Häkchen der Pläne und der Link
+  in den Clases-Notizen.
+- Fotos werden im Browser auf 1400 px und WebP unter 300 KB gerechnet,
+  bevor sie hochgeladen werden.
+- Termine: Datum, Text und das Verfallsdatum (`data-hasta`, wird
+  automatisch mit `-05:00` gespeichert) sind editierbar; hinzufügen und
+  löschen ebenfalls.
+
 ## Offene Punkte
 
 - Logo als Vektor (SVG) statt PNG→WebP-Export

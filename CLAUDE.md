@@ -208,7 +208,10 @@ assets/
   `SportsActivityLocation` sind gesetzt. **Die Öffnungszeiten stehen damit
   an einer vierten Stelle** -- im JSON-LD im `<head>`. Bei Änderungen also
   vier Stellen gleichziehen.
-- Offen: Google Search Console (braucht Danielas Login), Link im
+- Google Search Console: Domain-Property, verifiziert per TXT-Record
+  bei Porkbun (`google-site-verification=...`) -- kein Meta-Tag nötig,
+  nicht zusätzlich einbauen.
+- Offen: Link im
   Google-Unternehmensprofil und in der Instagram-Bio, QR-Code fürs Gym.
 
 ## Editor für Daniela und ihre Schwester

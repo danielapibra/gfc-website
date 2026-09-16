@@ -211,6 +211,12 @@ assets/
 - Google Search Console: Domain-Property, verifiziert per TXT-Record
   bei Porkbun (`google-site-verification=...`) -- kein Meta-Tag nötig,
   nicht zusätzlich einbauen.
+- Besucherstatistik: GoatCounter, Panel https://goldenfightclub.goatcounter.com
+  (Danielas Konto). Zählskript im `<head>`; Klicks auf WhatsApp-/Instagram-
+  Links zählt `script.js` als Ereignis mit lesbarem Namen
+  ("WhatsApp · Elegir plan: Membresía básica (planes)"). Localhost wird von
+  GoatCounter nicht gezählt. Neue Buttons brauchen nichts extra, solange sie
+  auf wa.me/ oder instagram.com zeigen.
 - Offen: Link im
   Google-Unternehmensprofil und in der Instagram-Bio, QR-Code fürs Gym.
 

@@ -391,3 +391,47 @@ lightbox.addEventListener('touchend', (e)=>{
 
   start();
 })();
+
+// Besucherstatistik (GoatCounter, ohne Cookies): Das Skript im <head> zählt
+// die Seitenaufrufe. Hier kommen die Klicks auf WhatsApp- und Instagram-Links
+// dazu -- als Ereignis mit lesbarem Namen, damit Daniela im Panel sieht,
+// welcher Button Anfragen bringt ("WhatsApp · Elegir plan: Membresía básica").
+(function(){
+  const bereiche = {
+    siteHeader: 'menú', avisoBarra: 'aviso', mobileMenu: 'menú', top: 'inicio',
+    nosotros: 'nosotros', entrenamientos: 'entrenamientos', horarios: 'horarios',
+    clases: 'clases', planes: 'planes', equipo: 'equipo', galeria: 'galería',
+    ubicacion: 'ubicación', resenas: 'reseñas'
+  };
+  function nombre(a, canal){
+    const karte = a.closest('.plan-card');
+    const paket = a.classList.contains('pack-row') && a.querySelector('.n');
+    let texto;
+    if(karte){
+      const titel = karte.querySelector('.plan-ribbon');
+      texto = a.textContent.trim() + (titel ? ': ' + titel.textContent.trim() : '');
+    } else if(paket){
+      texto = 'Personalizado: ' + paket.textContent.trim();
+    } else {
+      texto = a.textContent.trim() || a.getAttribute('aria-label') || canal;
+    }
+    let ort;
+    if(a.classList.contains('fab')) ort = 'botón flotante';
+    else if(a.closest('footer')) ort = 'pie de página';
+    else {
+      const bereich = a.closest('section[id], header[id], nav[id], .aviso-barra[id]');
+      ort = bereich ? (bereiche[bereich.id] || bereich.id) : '';
+    }
+    return canal + ' · ' + texto + (ort ? ' (' + ort + ')' : '');
+  }
+  document.addEventListener('click', (e)=>{
+    const a = e.target.closest && e.target.closest('a[href]');
+    if(!a || !window.goatcounter || !window.goatcounter.count) return;
+    const href = a.getAttribute('href');
+    const canal = href.includes('wa.me/') ? 'WhatsApp'
+                : href.includes('instagram.com') ? 'Instagram' : null;
+    if(!canal) return;
+    const n = nombre(a, canal).replace(/\s+/g, ' ');
+    window.goatcounter.count({ path: n, title: n, event: true });
+  });
+})();
